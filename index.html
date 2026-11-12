@@ -6,7 +6,7 @@
 html{scroll-behavior:smooth;background:#141415}
 body{margin:0;background:#141415;font-family:'Manrope',system-ui,sans-serif}
 section{display:block;width:100%;overflow:hidden}
-iframe{display:block;width:100%;border:0;height:100vh;background:#141415}
+iframe{display:block;width:100%;border:0;height:100vh;background:#141415;transform-origin:0 0}
 #bar{position:fixed;z-index:50;top:20px;left:40px;right:40px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:16px 30px;border-radius:999px;background:linear-gradient(180deg,rgba(60,60,62,.55),rgba(30,30,31,.45));border:1px solid rgba(255,255,255,.22);box-shadow:0 18px 40px -22px rgba(0,0,0,.8),inset 0 1px 0 rgba(255,255,255,.3);-webkit-backdrop-filter:blur(18px) saturate(1.5);backdrop-filter:blur(18px) saturate(1.5)}
 #bar a{color:#F4F4F2;text-decoration:none}
 #brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:26px;white-space:nowrap}
@@ -15,6 +15,7 @@ iframe{display:block;width:100%;border:0;height:100vh;background:#141415}
 .nl{padding:6px 0;border-bottom:2px solid transparent;transition:border-color .2s}
 .nl:hover,.nl.on{border-bottom-color:#E10600}
 #res{background:#F4F4F2;color:#1E1E1F!important;padding:12px 24px;border-radius:999px;font-weight:800;font-size:19px}
+@media (min-width:901px){#bar{transform:scale(.75);transform-origin:0 0;top:15px;left:30px;right:auto;width:calc((100vw - 60px)/.75);box-sizing:border-box}}
 @media (max-width:900px){#bar{left:12px;right:12px;border-radius:28px;padding:12px 18px}#links{gap:4px 18px;font-size:16px}#brand{font-size:22px}#mas{width:64px;height:64px;flex:0 0 64px}}
 </style></head>
 <body>
@@ -23,14 +24,18 @@ iframe{display:block;width:100%;border:0;height:100vh;background:#141415}
 <div id="links">
 <a class="nl on" href="#home">Home</a><a class="nl" href="#about">About</a><a class="nl" href="#education">Education</a><a class="nl" href="#experience">Experience</a><a class="nl" href="#projects">Projects</a><a class="nl" href="#skills">Skills</a><a class="nl" href="#contact">Contact</a>
 </div></div>
-<section id="home"><iframe src="home.html?v=9" title="Home"></iframe></section>
-<section id="about"><iframe src="about.html?v=9" title="About me"></iframe></section>
-<section id="education"><iframe src="education.html?v=9" title="Education"></iframe></section>
-<section id="experience"><iframe src="experience.html?v=9" title="Experience"></iframe></section>
-<section id="projects"><iframe src="projects.html?v=9" title="Projects"></iframe></section>
-<section id="skills"><iframe src="skills.html?v=9" title="Skills"></iframe></section>
-<section id="contact"><iframe src="contact.html?v=9" title="Contact"></iframe></section>
+<section id="home"><iframe src="home.html?v=13" title="Home"></iframe></section>
+<section id="about"><iframe src="about.html?v=10" title="About me"></iframe></section>
+<section id="education"><iframe src="education.html?v=11" title="Education"></iframe></section>
+<section id="experience"><iframe src="experience.html?v=11" title="Experience"></iframe></section>
+<section id="projects"><iframe src="projects.html?v=13" title="Projects"></iframe></section>
+<section id="skills"><iframe src="skills.html?v=11" title="Skills"></iframe></section>
+<section id="contact"><iframe src="contact.html?v=12" title="Contact"></iframe></section>
 <script>
+var S=1;
+function calcS(){S=window.innerWidth>900?0.75:1;return S}
+function setH(f,hh){calcS();f.style.width=(100/S)+'%';f.style.transform=S===1?'none':'scale('+S+')';f.style.height=hh+'px';f.parentElement.style.height=(hh*S)+'px'}
+function fixAll(){calcS();document.querySelectorAll('section iframe').forEach(function(f){var t=f.title;if(t==='Home'||t==='Education'||t==='Experience'||t==='Skills'||t==='Projects'||t==='Contact')setH(f,window.innerHeight/S);else setH(f,f.offsetHeight||window.innerHeight/S)})}
 var IDS=['home','about','education','experience','projects','skills','contact'];
 function go(id,push){var el=document.getElementById(id);if(!el)return;el.scrollIntoView({behavior:'smooth',block:'start'});if(push){try{history.replaceState(null,'','#'+id)}catch(e){}}}
 document.querySelectorAll('#bar a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();go(a.getAttribute('href').slice(1),true)})});
@@ -47,7 +52,7 @@ function applySkin(){
   var want=red?'me-black-directions.webp':'me-red-directions.webp';
   if(m.dataset.s!==want){m.dataset.s=want;if(!poking)m.style.backgroundImage='url('+want+')'}
 }
-window.addEventListener('scroll',setActive,{passive:true});window.addEventListener('resize',function(){document.querySelector('#home iframe').style.height=window.innerHeight+'px';document.querySelector('#education iframe').style.height=window.innerHeight+'px';document.querySelector('#experience iframe').style.height=window.innerHeight+'px';document.querySelector('#skills iframe').style.height=window.innerHeight+'px';document.querySelector('#projects iframe').style.height=window.innerHeight+'px';document.querySelector('#contact iframe').style.height=window.innerHeight+'px';setActive()});
+window.addEventListener('scroll',setActive,{passive:true});window.addEventListener('resize',function(){fixAll();setActive()});
 var MAPD={'up-left':0,'up':1,'up-right':2,'left':3,'right':5,'down-left':6,'down':7,'down-right':8},ORD=['right','down-right','down','down-left','left','up-left','up','up-right'];
 function cellPos(k){return ((k%3)*50)+'% '+(Math.floor(k/3)*50)+'%'}
 var poking=false;
@@ -67,11 +72,11 @@ document.getElementById('mas').addEventListener('click',function(){
 document.addEventListener('mousemove',function(e){look(e.clientX,e.clientY)});
 window.addEventListener('message',function(e){var d=e.data||{};
   var fs=document.querySelectorAll('iframe'),f=null;for(var i=0;i<fs.length;i++)if(fs[i].contentWindow===e.source)f=fs[i];
-  if(d.type==='pf-height'&&f){var hh=d.h;if(f.title==='Home')hh=window.innerHeight;if(f.title==='Education'||f.title==='Experience'||f.title==='Skills'||f.title==='Projects'||f.title==='Contact')hh=window.innerHeight;if(hh>100&&Math.abs(hh-f.offsetHeight)>1)f.style.height=hh+'px'}
+  if(d.type==='pf-height'&&f){calcS();var hh=d.h,t=f.title;if(t==='Home'||t==='Education'||t==='Experience'||t==='Skills'||t==='Projects'||t==='Contact')hh=window.innerHeight/S;if(hh>100&&Math.abs(hh-parseFloat(f.style.height||0))>1)setH(f,hh)}
   else if(d.type==='pf-wash'&&f){wp[f.parentElement.id]=d.p;applySkin()}
   else if(d.type==='pf-go'&&IDS.indexOf(d.to)>-1||d.to==='index')go(d.to==='index'?'home':d.to,true);
-  else if(d.type==='pf-mouse'&&f){var r=f.getBoundingClientRect();look(r.left+d.x,r.top+d.y)}
+  else if(d.type==='pf-mouse'&&f){var r=f.getBoundingClientRect();look(r.left+d.x*S,r.top+d.y*S)}
 });
-window.addEventListener('load',function(){setActive();if(location.hash)setTimeout(function(){go(location.hash.slice(1))},700)});
+fixAll();window.addEventListener('load',function(){fixAll();setActive();if(location.hash)setTimeout(function(){go(location.hash.slice(1))},700)});
 window.addEventListener('hashchange',function(){go(location.hash.slice(1))});
 </script></body></html>

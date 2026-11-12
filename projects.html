@@ -19,27 +19,27 @@ a:focus-visible,button:focus-visible{outline:2px solid #FFFFFF;outline-offset:3p
 .nl.on{border-bottom-color:#E10600}
 .btnr{display:inline-block;background:#E10600;color:#FFFFFF;padding:15px 28px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none}
 .btnr:hover{background:#B80500}
-.pl{position:relative;z-index:2;display:inline-block;padding:12px 24px;border-radius:999px;font-weight:700;font-size:17px;text-decoration:none}
+.pl{position:relative;z-index:2;display:inline-block;padding:13px 26px;border-radius:999px;font-weight:700;font-size:18.5px;text-decoration:none}
 .pl.dark{background:#F4F4F2;color:#1E1E1F}
 .pl.dark:hover{background:#E10600}
 .pl.line{border:1.5px solid #C0C0C0;color:#F4F4F2;padding:8.5px 18.5px}
 .pl.line:hover{background:#F4F4F2;color:#1E1E1F}
-.slot{position:absolute;left:50%;top:14px;margin-left:-260px;width:520px;transition:transform .7s cubic-bezier(.2,.7,.2,1),opacity .5s ease,filter .5s ease}
+.slot{position:absolute;left:50%;top:14px;margin-left:-280px;width:560px;transition:transform .7s cubic-bezier(.2,.7,.2,1),opacity .5s ease,filter .5s ease}
 .face{transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s ease}
 .face:hover{transform:translateY(-16px) scale(1.035);box-shadow:0 44px 70px -24px rgba(0,0,0,.6)}
 .cbtn{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:transform .2s ease,background .2s ease}
 .cbtn:hover:not(:disabled){transform:scale(1.08)}
 .cbtn:disabled{opacity:.35;cursor:default}
-.an{position:relative;height:190px;margin:16px 32px 0;border-radius:14px;background:rgba(0,0,0,0.4);border:1px solid rgba(255,255,255,0.12);overflow:hidden;color:#C0C0C0;font-size:10.5px;font-weight:700}
-.an .cap{position:absolute;left:14px;bottom:9px;font-size:10.5px;font-weight:600;color:#C0C0C0}
+.an{position:relative;height:190px;margin:16px 32px 0;border-radius:14px;background:rgba(0,0,0,0.4);border:1px solid rgba(255,255,255,0.12);overflow:hidden;color:#C0C0C0;font-size:13.5px;font-weight:700}
+.an .cap{position:absolute;left:14px;bottom:9px;font-size:13.5px;font-weight:600;color:#C0C0C0}
 .s-row{position:absolute;left:14px;right:14px;top:22px;display:flex;justify-content:space-between}
-.s-node{width:68px;height:44px;border:1.5px solid #8A8A88;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#E7E7E5;font-size:10px;background:#333}
+.s-node{width:68px;height:44px;border:1.5px solid #8A8A88;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#E7E7E5;font-size:13px;background:#333}
 .s-node.w{animation:sKill 4s linear infinite both;animation-play-state:var(--play,paused)}
 .s-node.l{animation:sLand 4s linear infinite both;animation-play-state:var(--play,paused)}
 @keyframes sLand{0%,86%{border-color:#8A8A88;box-shadow:none}92%{border-color:#C0C0C0;box-shadow:0 0 16px #C0C0C0}100%{border-color:#8A8A88;box-shadow:none}}
-.s-kill{position:absolute;left:14px;top:76px;font-size:10px;color:#FF5A4D;opacity:0;animation:sMsg 4s linear infinite both;animation-play-state:var(--play,paused)}
+.s-kill{position:absolute;left:14px;top:76px;font-size:13px;color:#FF5A4D;opacity:0;animation:sMsg 4s linear infinite both;animation-play-state:var(--play,paused)}
 @keyframes sMsg{0%,48%{opacity:0}54%,72%{opacity:1}80%,100%{opacity:0}}
-.s-stat{flex:1;border:1px solid #555;border-radius:10px;padding:8px 10px;color:#C0C0C0;font-size:10px;line-height:1.3;background:#333}
+.s-stat{flex:1;border:1px solid #555;border-radius:10px;padding:8px 10px;color:#C0C0C0;font-size:13px;line-height:1.3;background:#333}
 .s-stat b{display:block;font-size:20px;color:#FFFFFF}
 .s-stat.red{border-color:#E10600;background:rgba(225,6,0,0.34)}
 .s-stat.red b{color:#FF5A4D}
@@ -52,13 +52,13 @@ a:focus-visible,button:focus-visible{outline:2px solid #FFFFFF;outline-offset:3p
 @keyframes rOut{0%,8%{transform:scaleX(0)}28%,92%{transform:scaleX(1)}100%{transform:scaleX(0)}}
 @keyframes rSum{0%,30%{transform:scaleX(0)}55%,92%{transform:scaleX(1)}100%{transform:scaleX(0)}}
 .c-row{position:absolute;left:14px;right:14px;display:flex;align-items:center;justify-content:space-between}
-.c-pill{font-size:10px;padding:4px 10px;border-radius:999px;transform-origin:right center;animation:cPop 4.2s ease infinite both;animation-play-state:var(--play,paused)}
+.c-pill{font-size:13px;padding:4px 10px;border-radius:999px;transform-origin:right center;animation:cPop 4.2s ease infinite both;animation-play-state:var(--play,paused)}
 .c-pill.ok{background:#C0C0C0;color:#F4F4F2}
 .c-pill.bad{background:#E10600;color:#FFFFFF}
 @keyframes cPop{0%,6%{transform:scale(0)}18%,86%{transform:scale(1)}96%,100%{transform:scale(0)}}
 .g-bar{transform-origin:left;animation:gGrow 4.2s ease infinite both;animation-play-state:var(--play,paused)}
 @keyframes gGrow{0%,6%{transform:scaleX(0)}40%,90%{transform:scaleX(1)}100%{transform:scaleX(0)}}
-.g-tag{position:absolute;right:14px;bottom:8px;background:#E10600;color:#FFFFFF;font-size:10px;padding:4px 10px;border-radius:999px;transform-origin:right center;animation:cPop 4.2s ease 1s infinite both;animation-play-state:var(--play,paused)}
+.g-tag{position:absolute;right:14px;bottom:8px;background:#E10600;color:#FFFFFF;font-size:13px;padding:4px 10px;border-radius:999px;transform-origin:right center;animation:cPop 4.2s ease 1s infinite both;animation-play-state:var(--play,paused)}
 .d-row{height:12px;border-radius:4px;background:#444;margin-bottom:8px}
 .d-row.f2{animation:dFlag2 4s linear infinite both;animation-play-state:var(--play,paused)}
 .d-row.f4{animation:dFlag4 4s linear infinite both;animation-play-state:var(--play,paused)}
@@ -75,7 +75,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #FFFFFF;outline-offset:3p
 .f-sq.fl{animation-name:fFlaky}
 @keyframes fRun{0%,15%{background:#555}30%,100%{background:#C0C0C0}}
 @keyframes fFlaky{0%,15%{background:#555}30%{background:#C0C0C0}50%{background:#E10600}68%{background:#C0C0C0}84%,100%{background:#E10600}}
-.f-tag{position:absolute;right:14px;top:36px;background:#E10600;color:#FFFFFF;font-size:10px;padding:5px 11px;border-radius:999px;transform-origin:right center;animation:cPop 3.6s ease 1.8s infinite both;animation-play-state:var(--play,paused)}
+.f-tag{position:absolute;right:14px;top:36px;background:#E10600;color:#FFFFFF;font-size:13px;padding:5px 11px;border-radius:999px;transform-origin:right center;animation:cPop 3.6s ease 1.8s infinite both;animation-play-state:var(--play,paused)}
 @media (prefers-reduced-motion:reduce){.slot,.face,.cbtn{transition:none}.an *{animation:none !important}.c-pill,.g-tag,.f-tag,.g-bar,.r-out,.r-sum{transform:none !important}.s-dot{display:none}}
 
 .rise-h{animation:riseH .9s cubic-bezier(.2,.8,.2,1) both}
@@ -98,15 +98,15 @@ a:focus-visible,button:focus-visible{outline:2px solid #FFFFFF;outline-offset:3p
 @keyframes washMove{0%{background-position:0% 0%}100%{background-position:100% 100%}}
 .orb.r{background:rgba(225,6,0,0.22)}.orb.s{background:rgba(192,192,192,0.14)}
 @media (prefers-reduced-motion:reduce){.wash{animation:none}}
-.an{font-size:12px}
+.an{font-size:15px}
 .rv{opacity:0;animation-duration:9s;animation-iteration-count:infinite;animation-timing-function:linear;animation-fill-mode:both;animation-play-state:var(--play,paused)}
 .bw{transform-origin:left center;transform:scaleX(0);animation-duration:9s;animation-iteration-count:infinite;animation-timing-function:ease-out;animation-fill-mode:both;animation-play-state:var(--play,paused)}
-.mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;color:#E7E7E5}
+.mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:15.5px;color:#E7E7E5}
 .bar{position:absolute;height:10px;border-radius:5px}
-.lb{position:absolute;font-size:12px;font-weight:700;color:#D8D8D6;white-space:nowrap}
-.pillr{position:absolute;background:#E10600;color:#fff;font-size:12px;font-weight:800;padding:5px 12px;border-radius:999px}
-.pills{position:absolute;background:#C0C0C0;color:#1E1E1F;font-size:12px;font-weight:800;padding:5px 12px;border-radius:999px}
-.chip{position:absolute;width:98px;height:30px;border:1.5px solid #666;border-radius:8px;background:#333;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#E7E7E5;animation-duration:9s;animation-iteration-count:infinite;animation-timing-function:linear;animation-fill-mode:both;animation-play-state:var(--play,paused)}
+.lb{position:absolute;font-size:15px;font-weight:700;color:#D8D8D6;white-space:nowrap}
+.pillr{position:absolute;background:#E10600;color:#fff;font-size:15px;font-weight:800;padding:5px 12px;border-radius:999px}
+.pills{position:absolute;background:#C0C0C0;color:#1E1E1F;font-size:15px;font-weight:800;padding:5px 12px;border-radius:999px}
+.chip{position:absolute;width:98px;height:30px;border:1.5px solid #666;border-radius:8px;background:#333;display:flex;align-items:center;justify-content:center;font-size:14.5px;font-weight:700;color:#E7E7E5;animation-duration:9s;animation-iteration-count:infinite;animation-timing-function:linear;animation-fill-mode:both;animation-play-state:var(--play,paused)}
 @keyframes r1{0%,0%{opacity:0;transform:translateY(8px)}4%,90%{opacity:1;transform:none}97%{opacity:1}100%{opacity:0}}.r1{animation-name:r1}
 @keyframes w1{0%,0%{transform:scaleX(0)}10%,90%{transform:scaleX(1)}97%{transform:scaleX(1)}100%{transform:scaleX(0)}}.w1{animation-name:w1}
 @keyframes r2{0%,9%{opacity:0;transform:translateY(8px)}13%,90%{opacity:1;transform:none}97%{opacity:1}100%{opacity:0}}.r2{animation-name:r2}
@@ -171,7 +171,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #FFFFFF;outline-offset:3p
 </div>
 </nav>
 
-<header style="position:relative;z-index:2;padding:44px 56px 0;text-align:center"><h1 class="rise-h" style="margin:0;font-weight:800;font-size:40px;line-height:1;letter-spacing:-0.04em">Projects</h1></header>
+<header style="position:relative;z-index:2;padding:26px 56px 0;text-align:center"><h1 class="rise-h" style="margin:0;font-weight:800;font-size:40px;line-height:1;letter-spacing:-0.04em">Projects</h1></header>
 
 <section id="pstage" style="position:relative;z-index:2;padding:12px 0 0">
 <div style="display:flex;align-items:center;justify-content:center;gap:20px;padding:10px 0 0;position:relative;z-index:5"><div style="font-size:14px;font-weight:700;letter-spacing:0.14em;color:#FF5A4D">{{counter}}</div><div style="display:flex;align-items:center;gap:8px">
@@ -180,15 +180,15 @@ a:focus-visible,button:focus-visible{outline:2px solid #FFFFFF;outline-offset:3p
 </sc-for>
 </div></div>
 
-<div style="position:relative;height:830px;perspective:1900px;overflow:hidden;user-select:none" onPointerDown="{{down}}" onPointerUp="{{up}}" onWheel="{{wheel}}">
-<button class="cbtn" aria-label="Previous" disabled="{{atStart}}" onClick="{{prev}}" style="position:absolute;left:56px;top:370px;z-index:40;border:1.5px solid #C0C0C0;background:rgba(30,30,31,0.6);color:#F4F4F2;padding:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></button><button class="cbtn" aria-label="Next" disabled="{{atEnd}}" onClick="{{next}}" style="position:absolute;right:56px;top:370px;z-index:40;border:0;background:#E10600;color:#FFFFFF;padding:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></button>
+<div style="position:relative;height:920px;perspective:1900px;overflow:hidden;user-select:none" onPointerDown="{{down}}" onPointerUp="{{up}}" onWheel="{{wheel}}">
+<button class="cbtn" aria-label="Previous" disabled="{{atStart}}" onClick="{{prev}}" style="position:absolute;left:56px;top:415px;z-index:40;border:1.5px solid #C0C0C0;background:rgba(30,30,31,0.6);color:#F4F4F2;padding:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></button><button class="cbtn" aria-label="Next" disabled="{{atEnd}}" onClick="{{next}}" style="position:absolute;right:56px;top:415px;z-index:40;border:0;background:#E10600;color:#FFFFFF;padding:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></button>
 <sc-for list="{{cards}}" as="c" hint-placeholder-count="7">
 <div class="slot" style="{{c.slotStyle}}">
-<div class="face" style="position:relative;width:520px;height:800px;background:linear-gradient(160deg,#3C3C3F,#242426);border:1px solid rgba(255,255,255,0.18);border-radius:24px;overflow:hidden;box-shadow:0 30px 60px -28px rgba(0,0,0,0.55);display:grid;grid-template-columns:1fr;grid-template-rows:10px auto 1fr">
+<div class="face" style="position:relative;width:560px;height:890px;background:linear-gradient(160deg,#3C3C3F,#242426);border:1px solid rgba(255,255,255,0.18);border-radius:24px;overflow:hidden;box-shadow:0 30px 60px -28px rgba(0,0,0,0.55);display:grid;grid-template-columns:1fr;grid-template-rows:10px auto 1fr">
 <div style="height:10px;background:#E10600;grid-column:1/2"></div>
 <div style="grid-column:1;grid-row:2;min-width:0"><div style="padding:22px 32px 0">
 <div style="font-weight:800;font-size:44px;line-height:1;letter-spacing:-0.02em;color:#FF5A4D">{{c.num}}</div>
-<div style="margin-top:6px;font-size:17px;font-weight:600;color:#D8D8D6">{{c.numLabel}}</div>
+<div style="margin-top:6px;font-size:19px;font-weight:600;color:#D8D8D6">{{c.numLabel}}</div>
 <h2 style="margin:16px 0 0;font-weight:800;font-size:32px;line-height:1.08;letter-spacing:-0.01em">{{c.name}}</h2>
 
 </div>
@@ -206,13 +206,13 @@ a:focus-visible,button:focus-visible{outline:2px solid #FFFFFF;outline-offset:3p
 <div class="mono rv r1" style="position:absolute;left:14px;top:14px;">$ repo-scan github.com/psf/requests</div><div class="mono rv r2" style="position:absolute;left:14px;top:40px;">Reading 1,240 files...</div><div class="lb rv r3" style="left:14px;top:72px;">Full files</div><div class="bar bw w3" style="left:124px;top:76px;width:316px;background:#8A8A88;opacity:1"></div><div class="lb rv r4" style="left:14px;top:98px;">Code outlines</div><div class="bar bw w4" style="left:124px;top:102px;width:53px;background:#E10600;opacity:1"></div><div class="pillr rv r5" style="left:200px;top:94px">84% fewer tokens</div><div class="mono rv r6" style="position:absolute;left:14px;top:134px;color:#FFFFFF;font-weight:700">Summary ready in 5.0 s</div><div class="pills rv r7" style="right:14px;top:128px">10 of 10 repos under 15 s</div>
 </sc-if>
 <sc-if value="{{c.is2}}" hint-placeholder-val="{{ false }}">
-<div class="rv r2" style="position:absolute;left:14px;top:16px;right:14px;height:26px;display:flex;align-items:center;justify-content:space-between;font-size:13px;font-weight:600;color:#E7E7E5"><span>The API returns JSON.</span><span class="pills" style="position:static">Supported</span></div><div class="rv r4" style="position:absolute;left:14px;top:50px;right:14px;height:26px;display:flex;align-items:center;justify-content:space-between;font-size:13px;font-weight:600;color:#E7E7E5"><span>It handles 10,000 requests a second.</span><span class="pillr" style="position:static">Not found</span></div><div class="rv r6" style="position:absolute;left:14px;top:84px;right:14px;height:26px;display:flex;align-items:center;justify-content:space-between;font-size:13px;font-weight:600;color:#E7E7E5"><span>Setup takes three steps.</span><span class="pills" style="position:static">Supported</span></div><div class="lb rv r7" style="left:14px;top:128px;">Planted errors caught</div><div class="bar bw w7" style="left:14px;top:152px;width:326px;background:#E10600;opacity:1"></div><div class="lb rv r8" style="left:350px;top:146px;color:#FFFFFF;font-size:14px">78 of 80</div>
+<div class="rv r2" style="position:absolute;left:14px;top:16px;right:14px;height:26px;display:flex;align-items:center;justify-content:space-between;font-size:14.5px;font-weight:600;color:#E7E7E5"><span>The API returns JSON.</span><span class="pills" style="position:static">Supported</span></div><div class="rv r4" style="position:absolute;left:14px;top:50px;right:14px;height:26px;display:flex;align-items:center;justify-content:space-between;font-size:14.5px;font-weight:600;color:#E7E7E5"><span>It handles 10,000 requests a second.</span><span class="pillr" style="position:static">Not found</span></div><div class="rv r6" style="position:absolute;left:14px;top:84px;right:14px;height:26px;display:flex;align-items:center;justify-content:space-between;font-size:14.5px;font-weight:600;color:#E7E7E5"><span>Setup takes three steps.</span><span class="pills" style="position:static">Supported</span></div><div class="lb rv r7" style="left:14px;top:128px;">Planted errors caught</div><div class="bar bw w7" style="left:14px;top:152px;width:326px;background:#E10600;opacity:1"></div><div class="lb rv r8" style="left:350px;top:146px;color:#FFFFFF;font-size:14px">78 of 80</div>
 </sc-if>
 <sc-if value="{{c.is3}}" hint-placeholder-val="{{ false }}">
 <div class="lb rv r1" style="left:14px;top:13px;">Claude Haiku</div><div class="bar bw w1" style="left:110px;top:16px;width:274px;background:#C0C0C0;opacity:1"></div><div class="lb rv r1" style="left:400px;top:13px;">98%</div><div class="lb rv r2" style="left:14px;top:39px;">Nova Lite</div><div class="bar bw w2" style="left:110px;top:42px;width:266px;background:#E10600;opacity:1"></div><div class="lb rv r2" style="left:400px;top:39px;">95%</div><div class="lb rv r3" style="left:14px;top:65px;">Model C</div><div class="bar bw w3" style="left:110px;top:68px;width:198px;background:#6A6A6C;opacity:1"></div><div class="lb rv r3" style="left:400px;top:65px;">71%</div><div class="lb rv r5" style="left:14px;top:100px;">Cost per 1,000 tasks</div><div class="lb rv r5" style="left:14px;top:126px;">Haiku</div><div class="bar bw w5" style="left:70px;top:130px;width:330px;background:#8A8A88;opacity:1"></div><div class="lb rv r6" style="left:14px;top:148px;">Nova Lite</div><div class="bar bw w6" style="left:82px;top:152px;width:18px;background:#E10600;opacity:1"></div><div class="pillr rv r7" style="right:14px;top:138px">18x cheaper</div>
 </sc-if>
 <sc-if value="{{c.is4}}" hint-placeholder-val="{{ false }}">
-<div class="chip drf" style="left:14px;top:14px">S3</div><div class="chip " style="left:122px;top:14px">IAM</div><div class="chip " style="left:230px;top:14px">Lambda</div><div class="chip " style="left:338px;top:14px">EventBridge</div><div class="chip " style="left:14px;top:54px">EC2</div><div class="chip " style="left:122px;top:54px">VPC</div><div class="chip " style="left:230px;top:54px">KMS</div><div class="chip " style="left:338px;top:54px">RDS</div><div class="rv r4" style="position:absolute;left:14px;top:100px;right:14px;height:30px;border:1px solid #E10600;border-radius:8px;background:rgba(225,6,0,.22);display:flex;align-items:center;padding:0 12px;font-size:12.5px;font-weight:700;color:#FFB4AE">Slack alert: S3 bucket opened to the public</div><div class="lb rv r6" style="left:14px;top:138px;">Fixed with a Terraform pull request</div><div class="bar bw w7" style="left:14px;top:166px;width:326px;background:#E10600;opacity:1"></div><div class="lb rv r7" style="left:350px;top:160px;color:#FFFFFF;font-size:14px">11 of 11</div>
+<div class="chip drf" style="left:14px;top:14px">S3</div><div class="chip " style="left:122px;top:14px">IAM</div><div class="chip " style="left:230px;top:14px">Lambda</div><div class="chip " style="left:338px;top:14px">EventBridge</div><div class="chip " style="left:14px;top:54px">EC2</div><div class="chip " style="left:122px;top:54px">VPC</div><div class="chip " style="left:230px;top:54px">KMS</div><div class="chip " style="left:338px;top:54px">RDS</div><div class="rv r4" style="position:absolute;left:14px;top:100px;right:14px;height:30px;border:1px solid #E10600;border-radius:8px;background:rgba(225,6,0,.22);display:flex;align-items:center;padding:0 12px;font-size:14px;font-weight:700;color:#FFB4AE">Slack alert: S3 bucket opened to the public</div><div class="lb rv r6" style="left:14px;top:138px;">Fixed with a Terraform pull request</div><div class="bar bw w7" style="left:14px;top:166px;width:326px;background:#E10600;opacity:1"></div><div class="lb rv r7" style="left:350px;top:160px;color:#FFFFFF;font-size:14px">11 of 11</div>
 </sc-if>
 <sc-if value="{{c.is5}}" hint-placeholder-val="{{ false }}">
 <div class="lb rv r1" style="left:14px;top:14px;">Source A</div><div style="position:absolute;left:84px;top:24px;width:240px;height:2px;background:#444"></div><div class="m-dot" style="top:20px;left:84px;animation-delay:0.0s"></div><div class="lb rv r1" style="left:14px;top:40px;">Source B</div><div style="position:absolute;left:84px;top:50px;width:240px;height:2px;background:#444"></div><div class="m-dot" style="top:46px;left:84px;animation-delay:0.4s"></div><div class="lb rv r1" style="left:14px;top:66px;">Source C</div><div style="position:absolute;left:84px;top:76px;width:240px;height:2px;background:#444"></div><div class="m-dot" style="top:72px;left:84px;animation-delay:0.8s"></div><div style="position:absolute;right:14px;top:14px;width:96px;height:76px;border:1.5px solid #8A8A88;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#E7E7E5;font-size:13px;font-weight:700">DuckDB</div><div class="lb rv r3" style="left:14px;top:102px;">Collected</div><div class="bar bw w3" style="left:100px;top:106px;width:300px;background:#8A8A88;opacity:1"></div><div class="lb rv r3" style="left:410px;top:100px;">8,224</div><div class="lb rv r5" style="left:14px;top:128px;">Unique</div><div class="bar bw w5" style="left:100px;top:132px;width:292px;background:#E10600;opacity:1"></div><div class="lb rv r5" style="left:410px;top:126px;">8,020</div><div class="pills rv r7" style="left:14px;top:154px">204 duplicates dropped</div>
@@ -221,15 +221,15 @@ a:focus-visible,button:focus-visible{outline:2px solid #FFFFFF;outline-offset:3p
 <div class="sq" style="left:14px;top:14px;animation-name:q0"></div><div class="sq" style="left:46px;top:14px;animation-name:q1"></div><div class="sq" style="left:78px;top:14px;animation-name:q2"></div><div class="sq" style="left:110px;top:14px;animation-name:q3"></div><div class="sq" style="left:142px;top:14px;animation-name:q4"></div><div class="sq" style="left:174px;top:14px;animation-name:q5"></div><div class="sq" style="left:206px;top:14px;animation-name:q6"></div><div class="sq" style="left:238px;top:14px;animation-name:q7"></div><div class="sq" style="left:14px;top:46px;animation-name:q8"></div><div class="sq" style="left:46px;top:46px;animation-name:q9"></div><div class="sq" style="left:78px;top:46px;animation-name:q10"></div><div class="sq" style="left:110px;top:46px;animation-name:q11"></div><div class="sq" style="left:142px;top:46px;animation-name:q12"></div><div class="sq" style="left:174px;top:46px;animation-name:q13"></div><div class="sq" style="left:206px;top:46px;animation-name:q14"></div><div class="sq" style="left:238px;top:46px;animation-name:q15"></div><div class="sq" style="left:14px;top:78px;animation-name:q16"></div><div class="sq" style="left:46px;top:78px;animation-name:q17"></div><div class="sq" style="left:78px;top:78px;animation-name:q18"></div><div class="sq" style="left:110px;top:78px;animation-name:q19"></div><div class="sq" style="left:142px;top:78px;animation-name:q20"></div><div class="sq" style="left:174px;top:78px;animation-name:q21"></div><div class="sq" style="left:206px;top:78px;animation-name:q22"></div><div class="sq" style="left:238px;top:78px;animation-name:q23"></div><div class="pillr rv r6" style="right:14px;top:18px">Issue opened</div><div class="lb rv r2" style="left:14px;top:116px;">3 of 74 CI runs shown</div><div class="mono rv r7" style="position:absolute;left:14px;top:142px;color:#FFFFFF;font-weight:700">6 of 6 flaky tests found</div><div class="pills rv r8" style="right:14px;top:136px">0 false alarms</div>
 </sc-if>
 </div>
-</div><div style="grid-column:1;grid-row:3;min-width:0;display:flex;flex-direction:column"><div style="padding:18px 32px 0;display:flex;flex-direction:column;gap:10px">
+</div><div style="grid-column:1;grid-row:3;min-width:0;display:flex;flex-direction:column"><div style="padding:14px 32px 0;display:flex;flex-direction:column;gap:10px">
 <sc-for list="{{c.points}}" as="pt" hint-placeholder-count="3">
-<div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:0 0 8px;height:8px;margin-top:11px;background:#E10600"></span><span style="font-size:17px;line-height:1.4">{{pt.t}}</span></div>
+<div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:0 0 9px;height:9px;margin-top:12px;background:#E10600"></span><span style="font-size:19.5px;line-height:1.36">{{pt.t}}</span></div>
 </sc-for>
 </div>
 <div style="margin-top:auto;padding:14px 32px 28px">
-<div style="display:flex;flex-wrap:wrap;gap:7px;margin-bottom:16px">
+<div style="display:flex;flex-wrap:wrap;gap:9px;margin-bottom:14px">
 <sc-for list="{{c.chips}}" as="ch" hint-placeholder-count="4">
-<span style="font-size:14px;font-weight:700;padding:5px 13px;border-radius:999px;background:#2A2A2A;color:#F4F4F2">{{ch.t}}</span>
+<span style="font-size:16.5px;font-weight:700;padding:5px 14px;border-radius:999px;background:#2A2A2A;color:#F4F4F2">{{ch.t}}</span>
 </sc-for>
 </div>
 <div style="display:flex;gap:10px">
@@ -304,7 +304,7 @@ const cards = ITEMS.map((it, k) => {
 let off = k - i; if (off > n / 2) off -= n; if (off < -n / 2) off += n;
 const a = Math.abs(off);
 const far = a > 2;
-const slotStyle = 'transform:translateX(' + (off * 540) + 'px) translateZ(' + (-a * 190) + 'px) rotateY(' + (-off * 24) + 'deg);opacity:' + (far ? 0 : (1 - a * 0.2)) + ';filter:grayscale(' + Math.min(1, a) + ') brightness(' + (1 - Math.min(a, 2) * 0.1) + ');z-index:' + (10 - a) + ';pointer-events:' + (far ? 'none' : 'auto');
+const slotStyle = 'transform:translateX(' + (off * 580) + 'px) translateZ(' + (-a * 190) + 'px) rotateY(' + (-off * 24) + 'deg);opacity:' + (far ? 0 : (1 - a * 0.2)) + ';filter:grayscale(' + Math.min(1, a) + ') brightness(' + (1 - Math.min(a, 2) * 0.1) + ');z-index:' + (10 - a) + ';pointer-events:' + (far ? 'none' : 'auto');
 return {
 slotStyle,
 num: it.num, numLabel: it.numLabel, name: it.name, tagline: it.tagline, repo: it.repo, hasDemo: it.hasDemo,
