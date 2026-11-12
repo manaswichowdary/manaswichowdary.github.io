@@ -19,7 +19,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #FFFFFF;outline-offset:3p
 .nl.on{border-bottom-color:#E10600}
 .btnr{display:inline-block;background:#E10600;color:#FFFFFF;padding:15px 28px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none}
 .btnr:hover{background:#B80500}
-.slot{position:absolute;left:50%;top:36px;margin-left:-240px;width:480px;transition:transform .7s cubic-bezier(.2,.7,.2,1),opacity .5s ease,filter .5s ease}
+.slot{position:absolute;left:50%;top:36px;margin-left:-280px;width:560px;transition:transform .7s cubic-bezier(.2,.7,.2,1),opacity .5s ease,filter .5s ease}
 .face{transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s ease}
 .face:hover{transform:translateY(-16px) scale(1.035);box-shadow:0 44px 70px -24px rgba(0,0,0,.6)}
 .cbtn{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:transform .2s ease,background .2s ease}
@@ -49,7 +49,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #FFFFFF;outline-offset:3p
 @media (prefers-reduced-motion:reduce){.wash{animation:none}}
 </style>
 </helmet>
-<div style="background:linear-gradient(180deg,#1A1A1B 0%,#141415 100%);position:relative;overflow:hidden;color:#F4F4F2;font-family:'Manrope',system-ui,sans-serif;min-height:1750px" onKeyDown="{{keys}}">
+<div style="background:linear-gradient(180deg,#1A1A1B 0%,#141415 100%);position:relative;overflow:hidden;color:#F4F4F2;font-family:'Manrope',system-ui,sans-serif;min-height:1940px" onKeyDown="{{keys}}">
 <div class="wash"></div><div class="orb r o1" style="width:640px;height:640px;left:-180px;top:-60px"></div><div class="orb r o2" style="width:560px;height:560px;right:-160px;top:520px"></div>
 
 
@@ -70,24 +70,24 @@ a:focus-visible,button:focus-visible{outline:2px solid #FFFFFF;outline-offset:3p
 <header style="position:relative;z-index:2;padding:40px 56px 0;text-align:center"><h1 class="rise-h" style="margin:0;font-weight:800;font-size:72px;line-height:1;letter-spacing:-0.04em">Experience</h1></header>
 
 <section style="position:relative;z-index:2;padding:12px 0 0">
-<div style="position:relative;height:760px;perspective:1900px;overflow:hidden;user-select:none" onPointerDown="{{down}}" onPointerUp="{{up}}" onWheel="{{wheel}}">
+<div style="position:relative;height:870px;perspective:2000px;overflow:hidden;user-select:none" onPointerDown="{{down}}" onPointerUp="{{up}}" onWheel="{{wheel}}">
 <sc-for list="{{cards}}" as="c" hint-placeholder-count="4">
 <div class="slot" style="{{c.slotStyle}}">
-<div class="face" style="position:relative;width:480px;height:660px;background:linear-gradient(160deg,#3C3C3F,#242426);border:1px solid rgba(255,255,255,0.18);border-radius:24px;overflow:hidden;box-shadow:0 30px 60px -28px rgba(0,0,0,0.55);display:flex;flex-direction:column">
+<div class="face" style="position:relative;width:560px;height:770px;background:linear-gradient(160deg,#3C3C3F,#242426);border:1px solid rgba(255,255,255,0.18);border-radius:24px;overflow:hidden;box-shadow:0 30px 60px -28px rgba(0,0,0,0.55);display:flex;flex-direction:column">
 <div style="height:10px;background:#E10600;flex:0 0 10px"></div>
-<div style="padding:26px 32px 0">
-<div style="display:flex;justify-content:space-between;gap:12px;font-size:13px;font-weight:700;color:#FF5A4D"><span>{{c.when}}</span><span style="color:rgba(255,255,255,0.2)">{{c.where}}</span></div>
-<h2 style="margin:12px 0 4px;font-family:'Newsreader',Georgia,serif;font-weight:500;font-size:34px;line-height:1.08;letter-spacing:-0.01em">{{c.title}}</h2>
-<div style="font-size:16px;font-weight:600;color:rgba(255,255,255,0.2)">{{c.org}}</div>
+<div style="padding:30px 38px 0">
+<div style="display:flex;justify-content:space-between;gap:12px;font-size:16px;font-weight:700;color:#FF5A4D"><span>{{c.when}}</span><span style="color:#D8D8D6">{{c.where}}</span></div>
+<h2 style="margin:14px 0 6px;font-weight:800;font-size:38px;line-height:1.1;letter-spacing:-0.03em">{{c.title}}</h2>
+<div style="font-size:20px;font-weight:600;color:#D8D8D6">{{c.org}}</div>
 </div>
-<div style="padding:18px 32px 0;display:flex;flex-direction:column;gap:12px">
+<div style="padding:20px 38px 0;display:flex;flex-direction:column;gap:13px">
 <sc-for list="{{c.points}}" as="pt" hint-placeholder-count="4">
-<div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:0 0 7px;height:7px;margin-top:9px;background:#E10600"></span><span style="font-size:15px;line-height:1.55;font-weight:500">{{pt.t}}</span></div>
+<div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:0 0 8px;height:8px;margin-top:10px;background:#E10600"></span><span style="font-size:17px;line-height:1.5;font-weight:500">{{pt.t}}</span></div>
 </sc-for>
 </div>
-<div style="margin-top:auto;padding:0 32px 26px;display:flex;flex-wrap:wrap;gap:8px">
+<div style="margin-top:auto;padding:0 38px 30px;display:flex;flex-wrap:wrap;gap:8px">
 <sc-for list="{{c.chips}}" as="ch" hint-placeholder-count="4">
-<span style="font-size:12px;font-weight:700;padding:6px 12px;border-radius:999px;background:#2A2A2A;color:#F4F4F2">{{ch.t}}</span>
+<span style="font-size:14px;font-weight:700;padding:7px 14px;border-radius:999px;background:#2A2A2A;color:#F4F4F2">{{ch.t}}</span>
 </sc-for>
 </div>
 <sc-if value="{{c.notCenter}}" hint-placeholder-val="{{ false }}"><button aria-label="{{c.label}}" onClick="{{c.pick}}" style="position:absolute;top:0;right:0;bottom:0;left:0;border:0;background:transparent;cursor:pointer;padding:0"></button></sc-if>
@@ -112,16 +112,11 @@ a:focus-visible,button:focus-visible{outline:2px solid #FFFFFF;outline-offset:3p
 </section>
 
 <section style="position:relative;z-index:2;padding:72px 56px 80px">
-<h2 style="margin:0 0 12px;font-family:'Newsreader',Georgia,serif;font-weight:500;font-size:44px;letter-spacing:-0.02em">Also at Arizona State University</h2>
-
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:24px">
-<div style="background:linear-gradient(160deg,rgba(255,255,255,0.14),rgba(255,255,255,0.04));border:1px solid rgba(255,255,255,0.2);-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4);border-radius:22px;padding:28px">
-<h3 style="margin:0 0 8px;font-size:20px;font-weight:700">Undergraduate Teaching Assistant, CSE 360</h3>
-<p style="margin:0;font-size:16px;line-height:1.6;color:rgba(255,255,255,0.2)">I supported students in a software engineering course at Arizona State University.</p>
-</div>
-<div style="background:linear-gradient(160deg,rgba(255,255,255,0.14),rgba(255,255,255,0.04));border:1px solid rgba(255,255,255,0.2);-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4);border-radius:22px;padding:28px">
-<h3 style="margin:0 0 8px;font-size:20px;font-weight:700">Student Outreach Aide, Watts College</h3>
-<p style="margin:0;font-size:16px;line-height:1.6;color:rgba(255,255,255,0.2)">At the Center for Academic and Student Affairs, I answer student emails about ASU resources.</p>
+<h2 style="margin:0 0 28px;font-weight:800;font-size:56px;letter-spacing:-0.035em">Also at Arizona State University</h2>
+<div style="display:grid;grid-template-columns:1fr;gap:24px">
+<div style="background:linear-gradient(160deg,rgba(255,255,255,0.14),rgba(255,255,255,0.04));border:1px solid rgba(255,255,255,0.22);-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4);border-radius:24px;padding:34px 38px;box-shadow:0 24px 50px -28px rgba(0,0,0,0.6),inset 0 1px 0 rgba(255,255,255,0.28)">
+<h3 style="margin:0 0 12px;font-size:30px;font-weight:800;line-height:1.2">Teaching Assistant, CSE 360, FSE 100 and ASU 101</h3>
+<p style="margin:0;font-size:20px;line-height:1.6;color:#E4E4E2">I supported students in these courses at Arizona State University.</p>
 </div>
 </div>
 </section>
@@ -160,7 +155,7 @@ const ITEMS = [
 { when: 'December 2026', where: 'Tempe', title: 'B.S. Computer Science', org: 'Arizona State University', points: [
 'I will graduate in December 2026 with a Bachelor of Science in Computer Science.',
 'My coursework and projects focus on software engineering, backend systems, cloud computing and applied AI.',
-'I have also worked as an undergraduate teaching assistant for CSE 360 and as a student outreach aide at Watts College.'
+'I have also worked as a TA for CSE 360, FSE 100 and ASU 101.'
 ], chips: ['Class of 2026', 'Tempe, Arizona'] }
 ];
 
@@ -178,7 +173,7 @@ const cards = ITEMS.map((it, k) => {
 const off = k - i;
 const a = Math.abs(off);
 const far = a > 2;
-const slotStyle = 'transform:translateX(' + (off * 350) + 'px) translateZ(' + (-a * 190) + 'px) rotateY(' + (-off * 24) + 'deg);opacity:' + (far ? 0 : (1 - a * 0.2)) + ';filter:grayscale(' + Math.min(1, a) + ') brightness(' + (1 - Math.min(a, 2) * 0.1) + ');z-index:' + (10 - a) + ';pointer-events:' + (far ? 'none' : 'auto');
+const slotStyle = 'transform:translateX(' + (off * 410) + 'px) translateZ(' + (-a * 190) + 'px) rotateY(' + (-off * 24) + 'deg);opacity:' + (far ? 0 : (1 - a * 0.2)) + ';filter:grayscale(' + Math.min(1, a) + ') brightness(' + (1 - Math.min(a, 2) * 0.1) + ');z-index:' + (10 - a) + ';pointer-events:' + (far ? 'none' : 'auto');
 return {
 slotStyle,
 when: it.when, where: it.where, title: it.title, org: it.org,
