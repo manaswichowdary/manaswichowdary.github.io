@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Projects | Manaswi Makkena</title>
-<script src="dc-lite.js"></script>
+<script src="dc-lite.js?v=4"></script>
 </head>
 <body>
 <x-dc>
@@ -19,12 +19,12 @@ a:focus-visible,button:focus-visible{outline:2px solid #FFFFFF;outline-offset:3p
 .nl.on{border-bottom-color:#E10600}
 .btnr{display:inline-block;background:#E10600;color:#FFFFFF;padding:15px 28px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none}
 .btnr:hover{background:#B80500}
-.pl{position:relative;z-index:2;display:inline-block;padding:10px 20px;border-radius:999px;font-weight:700;font-size:14px;text-decoration:none}
+.pl{position:relative;z-index:2;display:inline-block;padding:12px 24px;border-radius:999px;font-weight:700;font-size:17px;text-decoration:none}
 .pl.dark{background:#F4F4F2;color:#1E1E1F}
 .pl.dark:hover{background:#E10600}
 .pl.line{border:1.5px solid #C0C0C0;color:#F4F4F2;padding:8.5px 18.5px}
 .pl.line:hover{background:#F4F4F2;color:#1E1E1F}
-.slot{position:absolute;left:50%;top:36px;margin-left:-240px;width:480px;transition:transform .7s cubic-bezier(.2,.7,.2,1),opacity .5s ease,filter .5s ease}
+.slot{position:absolute;left:50%;top:14px;margin-left:-260px;width:520px;transition:transform .7s cubic-bezier(.2,.7,.2,1),opacity .5s ease,filter .5s ease}
 .face{transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s ease}
 .face:hover{transform:translateY(-16px) scale(1.035);box-shadow:0 44px 70px -24px rgba(0,0,0,.6)}
 .cbtn{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:transform .2s ease,background .2s ease}
@@ -98,9 +98,63 @@ a:focus-visible,button:focus-visible{outline:2px solid #FFFFFF;outline-offset:3p
 @keyframes washMove{0%{background-position:0% 0%}100%{background-position:100% 100%}}
 .orb.r{background:rgba(225,6,0,0.22)}.orb.s{background:rgba(192,192,192,0.14)}
 @media (prefers-reduced-motion:reduce){.wash{animation:none}}
+.an{font-size:12px}
+.rv{opacity:0;animation-duration:9s;animation-iteration-count:infinite;animation-timing-function:linear;animation-fill-mode:both;animation-play-state:var(--play,paused)}
+.bw{transform-origin:left center;transform:scaleX(0);animation-duration:9s;animation-iteration-count:infinite;animation-timing-function:ease-out;animation-fill-mode:both;animation-play-state:var(--play,paused)}
+.mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;color:#E7E7E5}
+.bar{position:absolute;height:10px;border-radius:5px}
+.lb{position:absolute;font-size:12px;font-weight:700;color:#D8D8D6;white-space:nowrap}
+.pillr{position:absolute;background:#E10600;color:#fff;font-size:12px;font-weight:800;padding:5px 12px;border-radius:999px}
+.pills{position:absolute;background:#C0C0C0;color:#1E1E1F;font-size:12px;font-weight:800;padding:5px 12px;border-radius:999px}
+.chip{position:absolute;width:98px;height:30px;border:1.5px solid #666;border-radius:8px;background:#333;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#E7E7E5;animation-duration:9s;animation-iteration-count:infinite;animation-timing-function:linear;animation-fill-mode:both;animation-play-state:var(--play,paused)}
+@keyframes r1{0%,0%{opacity:0;transform:translateY(8px)}4%,90%{opacity:1;transform:none}97%{opacity:1}100%{opacity:0}}.r1{animation-name:r1}
+@keyframes w1{0%,0%{transform:scaleX(0)}10%,90%{transform:scaleX(1)}97%{transform:scaleX(1)}100%{transform:scaleX(0)}}.w1{animation-name:w1}
+@keyframes r2{0%,9%{opacity:0;transform:translateY(8px)}13%,90%{opacity:1;transform:none}97%{opacity:1}100%{opacity:0}}.r2{animation-name:r2}
+@keyframes w2{0%,9%{transform:scaleX(0)}19%,90%{transform:scaleX(1)}97%{transform:scaleX(1)}100%{transform:scaleX(0)}}.w2{animation-name:w2}
+@keyframes r3{0%,18%{opacity:0;transform:translateY(8px)}22%,90%{opacity:1;transform:none}97%{opacity:1}100%{opacity:0}}.r3{animation-name:r3}
+@keyframes w3{0%,18%{transform:scaleX(0)}28%,90%{transform:scaleX(1)}97%{transform:scaleX(1)}100%{transform:scaleX(0)}}.w3{animation-name:w3}
+@keyframes r4{0%,27%{opacity:0;transform:translateY(8px)}31%,90%{opacity:1;transform:none}97%{opacity:1}100%{opacity:0}}.r4{animation-name:r4}
+@keyframes w4{0%,27%{transform:scaleX(0)}37%,90%{transform:scaleX(1)}97%{transform:scaleX(1)}100%{transform:scaleX(0)}}.w4{animation-name:w4}
+@keyframes r5{0%,36%{opacity:0;transform:translateY(8px)}40%,90%{opacity:1;transform:none}97%{opacity:1}100%{opacity:0}}.r5{animation-name:r5}
+@keyframes w5{0%,36%{transform:scaleX(0)}46%,90%{transform:scaleX(1)}97%{transform:scaleX(1)}100%{transform:scaleX(0)}}.w5{animation-name:w5}
+@keyframes r6{0%,45%{opacity:0;transform:translateY(8px)}49%,90%{opacity:1;transform:none}97%{opacity:1}100%{opacity:0}}.r6{animation-name:r6}
+@keyframes w6{0%,45%{transform:scaleX(0)}55%,90%{transform:scaleX(1)}97%{transform:scaleX(1)}100%{transform:scaleX(0)}}.w6{animation-name:w6}
+@keyframes r7{0%,54%{opacity:0;transform:translateY(8px)}58%,90%{opacity:1;transform:none}97%{opacity:1}100%{opacity:0}}.r7{animation-name:r7}
+@keyframes w7{0%,54%{transform:scaleX(0)}64%,90%{transform:scaleX(1)}97%{transform:scaleX(1)}100%{transform:scaleX(0)}}.w7{animation-name:w7}
+@keyframes r8{0%,63%{opacity:0;transform:translateY(8px)}67%,90%{opacity:1;transform:none}97%{opacity:1}100%{opacity:0}}.r8{animation-name:r8}
+@keyframes w8{0%,63%{transform:scaleX(0)}73%,90%{transform:scaleX(1)}97%{transform:scaleX(1)}100%{transform:scaleX(0)}}.w8{animation-name:w8}
+@keyframes r9{0%,72%{opacity:0;transform:translateY(8px)}76%,90%{opacity:1;transform:none}97%{opacity:1}100%{opacity:0}}.r9{animation-name:r9}
+@keyframes w9{0%,72%{transform:scaleX(0)}82%,90%{transform:scaleX(1)}97%{transform:scaleX(1)}100%{transform:scaleX(0)}}.w9{animation-name:w9}
+@keyframes drf{0%,30%{background:#333;border-color:#666;color:#E7E7E5}36%,64%{background:#E10600;border-color:#FF5A4D;color:#fff}70%,100%{background:#333;border-color:#666;color:#E7E7E5}}.drf{animation-name:drf}
+@keyframes q0{0%,0%{background:#555}2%,92%{background:#C0C0C0}97%,100%{background:#555}}
+@keyframes q1{0%,3%{background:#555}5%,92%{background:#C0C0C0}97%,100%{background:#555}}
+@keyframes q2{0%,6%{background:#555}8%,92%{background:#C0C0C0}97%,100%{background:#555}}
+@keyframes q3{0%,9%{background:#555}11%,92%{background:#C0C0C0}97%,100%{background:#555}}
+@keyframes q4{0%,12%{background:#555}14%,20%{background:#C0C0C0}22%,92%{background:#E10600}97%,100%{background:#555}}
+@keyframes q5{0%,15%{background:#555}17%,92%{background:#C0C0C0}97%,100%{background:#555}}
+@keyframes q6{0%,18%{background:#555}20%,92%{background:#C0C0C0}97%,100%{background:#555}}
+@keyframes q7{0%,21%{background:#555}23%,92%{background:#C0C0C0}97%,100%{background:#555}}
+@keyframes q8{0%,24%{background:#555}26%,92%{background:#C0C0C0}97%,100%{background:#555}}
+@keyframes q9{0%,27%{background:#555}29%,92%{background:#C0C0C0}97%,100%{background:#555}}
+@keyframes q10{0%,30%{background:#555}32%,92%{background:#C0C0C0}97%,100%{background:#555}}
+@keyframes q11{0%,33%{background:#555}35%,92%{background:#C0C0C0}97%,100%{background:#555}}
+@keyframes q12{0%,36%{background:#555}38%,92%{background:#C0C0C0}97%,100%{background:#555}}
+@keyframes q13{0%,39%{background:#555}41%,47%{background:#C0C0C0}49%,92%{background:#E10600}97%,100%{background:#555}}
+@keyframes q14{0%,42%{background:#555}44%,92%{background:#C0C0C0}97%,100%{background:#555}}
+@keyframes q15{0%,45%{background:#555}47%,92%{background:#C0C0C0}97%,100%{background:#555}}
+@keyframes q16{0%,48%{background:#555}50%,92%{background:#C0C0C0}97%,100%{background:#555}}
+@keyframes q17{0%,51%{background:#555}53%,92%{background:#C0C0C0}97%,100%{background:#555}}
+@keyframes q18{0%,54%{background:#555}56%,92%{background:#C0C0C0}97%,100%{background:#555}}
+@keyframes q19{0%,57%{background:#555}59%,92%{background:#C0C0C0}97%,100%{background:#555}}
+@keyframes q20{0%,60%{background:#555}62%,68%{background:#C0C0C0}70%,92%{background:#E10600}97%,100%{background:#555}}
+@keyframes q21{0%,63%{background:#555}65%,92%{background:#C0C0C0}97%,100%{background:#555}}
+@keyframes q22{0%,66%{background:#555}68%,92%{background:#C0C0C0}97%,100%{background:#555}}
+@keyframes q23{0%,69%{background:#555}71%,92%{background:#C0C0C0}97%,100%{background:#555}}
+.sq{position:absolute;width:24px;height:24px;border-radius:6px;background:#555;animation-duration:9s;animation-iteration-count:infinite;animation-timing-function:linear;animation-fill-mode:both;animation-play-state:var(--play,paused)}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1 !important;transform:none !important}.bw{transform:none !important}}
 </style>
 </helmet>
-<div style="background:linear-gradient(180deg,#1F1F21 0%,#141415 100%);position:relative;overflow:hidden;color:#F4F4F2;font-family:'Manrope',system-ui,sans-serif;min-height:1900px" onKeyDown="{{keys}}">
+<div style="background:linear-gradient(180deg,#1F1F21 0%,#141415 100%);position:relative;overflow:hidden;color:#F4F4F2;font-family:'Manrope',system-ui,sans-serif;height:100vh;min-height:0" onKeyDown="{{keys}}">
 <div class="wash"></div><div class="orb s o1" style="width:640px;height:640px;left:-180px;top:-60px"></div><div class="orb r o2" style="width:560px;height:560px;right:-160px;top:520px"></div>
 
 
@@ -114,22 +168,28 @@ a:focus-visible,button:focus-visible{outline:2px solid #FFFFFF;outline-offset:3p
 <a href="projects.html" class="nl on">Projects</a>
 <a href="skills.html" class="nl">Skills</a>
 <a href="contact.html" class="nl">Contact</a>
-<a href="contact.html" style="background:#F4F4F2;color:#1E1E1F;padding:10px 20px;border-radius:999px;text-decoration:none">Resume</a>
 </div>
 </nav>
 
-<header style="position:relative;z-index:2;padding:40px 56px 0;text-align:center"><h1 class="rise-h" style="margin:0;font-weight:800;font-size:72px;line-height:1;letter-spacing:-0.04em">Projects</h1></header>
+<header style="position:relative;z-index:2;padding:44px 56px 0;text-align:center"><h1 class="rise-h" style="margin:0;font-weight:800;font-size:40px;line-height:1;letter-spacing:-0.04em">Projects</h1></header>
 
-<section style="position:relative;z-index:2;padding:12px 0 0">
-<div style="position:relative;height:910px;perspective:1900px;overflow:hidden;user-select:none" onPointerDown="{{down}}" onPointerUp="{{up}}" onWheel="{{wheel}}">
+<section id="pstage" style="position:relative;z-index:2;padding:12px 0 0">
+<div style="display:flex;align-items:center;justify-content:center;gap:20px;padding:10px 0 0;position:relative;z-index:5"><div style="font-size:14px;font-weight:700;letter-spacing:0.14em;color:#FF5A4D">{{counter}}</div><div style="display:flex;align-items:center;gap:8px">
+<sc-for list="{{dots}}" as="d" hint-placeholder-count="7">
+<button aria-label="{{d.label}}" onClick="{{d.pick}}" style="border:0;padding:12px 0;background:transparent;cursor:pointer"><span style="display:block;width:30px;height:3px;background:{{d.color}};transition:background .3s ease"></span></button>
+</sc-for>
+</div></div>
+
+<div style="position:relative;height:830px;perspective:1900px;overflow:hidden;user-select:none" onPointerDown="{{down}}" onPointerUp="{{up}}" onWheel="{{wheel}}">
+<button class="cbtn" aria-label="Previous" disabled="{{atStart}}" onClick="{{prev}}" style="position:absolute;left:56px;top:370px;z-index:40;border:1.5px solid #C0C0C0;background:rgba(30,30,31,0.6);color:#F4F4F2;padding:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></button><button class="cbtn" aria-label="Next" disabled="{{atEnd}}" onClick="{{next}}" style="position:absolute;right:56px;top:370px;z-index:40;border:0;background:#E10600;color:#FFFFFF;padding:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></button>
 <sc-for list="{{cards}}" as="c" hint-placeholder-count="7">
 <div class="slot" style="{{c.slotStyle}}">
-<div class="face" style="position:relative;width:480px;height:820px;background:linear-gradient(160deg,#3C3C3F,#242426);border:1px solid rgba(255,255,255,0.18);border-radius:24px;overflow:hidden;box-shadow:0 30px 60px -28px rgba(0,0,0,0.55);display:flex;flex-direction:column">
-<div style="height:10px;background:#E10600;flex:0 0 10px"></div>
-<div style="padding:26px 32px 0">
-<div style="font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:64px;line-height:1;letter-spacing:-0.02em;color:#FF5A4D">{{c.num}}</div>
-<div style="margin-top:6px;font-size:14px;font-weight:600;color:rgba(255,255,255,0.2)">{{c.numLabel}}</div>
-<h2 style="margin:20px 0 0;font-family:'Newsreader',Georgia,serif;font-weight:500;font-size:34px;line-height:1.08;letter-spacing:-0.01em">{{c.name}}</h2>
+<div class="face" style="position:relative;width:520px;height:800px;background:linear-gradient(160deg,#3C3C3F,#242426);border:1px solid rgba(255,255,255,0.18);border-radius:24px;overflow:hidden;box-shadow:0 30px 60px -28px rgba(0,0,0,0.55);display:grid;grid-template-columns:1fr;grid-template-rows:10px auto 1fr">
+<div style="height:10px;background:#E10600;grid-column:1/2"></div>
+<div style="grid-column:1;grid-row:2;min-width:0"><div style="padding:22px 32px 0">
+<div style="font-weight:800;font-size:44px;line-height:1;letter-spacing:-0.02em;color:#FF5A4D">{{c.num}}</div>
+<div style="margin-top:6px;font-size:17px;font-weight:600;color:#D8D8D6">{{c.numLabel}}</div>
+<h2 style="margin:16px 0 0;font-weight:800;font-size:32px;line-height:1.08;letter-spacing:-0.01em">{{c.name}}</h2>
 
 </div>
 <div class="an" style="--play:{{c.play}}">
@@ -143,55 +203,39 @@ a:focus-visible,button:focus-visible{outline:2px solid #FFFFFF;outline-offset:3p
 
 </sc-if>
 <sc-if value="{{c.is1}}" hint-placeholder-val="{{ false }}">
-<div style="position:absolute;left:14px;top:14px;width:120px"><div style="margin-bottom:8px;color:#8A8A88">Repo files</div><div class="r-file" style="width:100%"></div><div class="r-file" style="width:82%"></div><div class="r-file" style="width:94%"></div><div class="r-file" style="width:70%"></div><div class="r-file" style="width:88%"></div><div class="r-file" style="width:60%"></div></div>
-<div style="position:absolute;left:160px;top:14px;width:96px"><div style="margin-bottom:8px;color:#8A8A88">Outline</div><div class="r-out" style="width:80%"></div><div class="r-out" style="width:60%;animation-delay:.2s"></div><div class="r-out" style="width:70%;animation-delay:.4s"></div></div>
-<div style="position:absolute;left:282px;top:14px;width:120px"><div style="margin-bottom:8px;color:#8A8A88">Summary</div><div class="r-sum" style="width:100%"></div><div class="r-sum" style="width:90%;animation-delay:.2s"></div><div class="r-sum" style="width:65%;animation-delay:.4s"></div></div>
-
+<div class="mono rv r1" style="position:absolute;left:14px;top:14px;">$ repo-scan github.com/psf/requests</div><div class="mono rv r2" style="position:absolute;left:14px;top:40px;">Reading 1,240 files...</div><div class="lb rv r3" style="left:14px;top:72px;">Full files</div><div class="bar bw w3" style="left:124px;top:76px;width:316px;background:#8A8A88;opacity:1"></div><div class="lb rv r4" style="left:14px;top:98px;">Code outlines</div><div class="bar bw w4" style="left:124px;top:102px;width:53px;background:#E10600;opacity:1"></div><div class="pillr rv r5" style="left:200px;top:94px">84% fewer tokens</div><div class="mono rv r6" style="position:absolute;left:14px;top:134px;color:#FFFFFF;font-weight:700">Summary ready in 5.0 s</div><div class="pills rv r7" style="right:14px;top:128px">10 of 10 repos under 15 s</div>
 </sc-if>
 <sc-if value="{{c.is2}}" hint-placeholder-val="{{ false }}">
-<div class="c-row" style="top:16px"><span style="width:62%;height:6px;border-radius:3px;background:#8A8A88"></span><span class="c-pill ok">Supported</span></div>
-<div class="c-row" style="top:46px"><span style="width:48%;height:6px;border-radius:3px;background:#8A8A88"></span><span class="c-pill bad" style="animation-delay:.7s">Not found</span></div>
-<div class="c-row" style="top:76px"><span style="width:56%;height:6px;border-radius:3px;background:#8A8A88"></span><span class="c-pill ok" style="animation-delay:1.4s">Supported</span></div>
-
+<div class="rv r2" style="position:absolute;left:14px;top:16px;right:14px;height:26px;display:flex;align-items:center;justify-content:space-between;font-size:13px;font-weight:600;color:#E7E7E5"><span>The API returns JSON.</span><span class="pills" style="position:static">Supported</span></div><div class="rv r4" style="position:absolute;left:14px;top:50px;right:14px;height:26px;display:flex;align-items:center;justify-content:space-between;font-size:13px;font-weight:600;color:#E7E7E5"><span>It handles 10,000 requests a second.</span><span class="pillr" style="position:static">Not found</span></div><div class="rv r6" style="position:absolute;left:14px;top:84px;right:14px;height:26px;display:flex;align-items:center;justify-content:space-between;font-size:13px;font-weight:600;color:#E7E7E5"><span>Setup takes three steps.</span><span class="pills" style="position:static">Supported</span></div><div class="lb rv r7" style="left:14px;top:128px;">Planted errors caught</div><div class="bar bw w7" style="left:14px;top:152px;width:326px;background:#E10600;opacity:1"></div><div class="lb rv r8" style="left:350px;top:146px;color:#FFFFFF;font-size:14px">78 of 80</div>
 </sc-if>
 <sc-if value="{{c.is3}}" hint-placeholder-val="{{ false }}">
-<div style="position:absolute;left:14px;right:14px;top:18px">
-<div style="display:flex;align-items:center;gap:10px;margin-bottom:12px"><span style="width:78px;color:#E7E7E5">Claude Haiku</span><span style="flex:1;height:10px;background:#444;border-radius:5px;overflow:hidden"><span class="g-bar" style="display:block;width:98%;height:100%;background:#C0C0C0"></span></span><span style="width:30px;color:#E7E7E5">98%</span></div>
-<div style="display:flex;align-items:center;gap:10px"><span style="width:78px;color:#E7E7E5">Nova Lite</span><span style="flex:1;height:10px;background:#444;border-radius:5px;overflow:hidden"><span class="g-bar" style="display:block;width:95%;height:100%;background:#E10600;animation-delay:.3s"></span></span><span style="width:30px;color:#E7E7E5">95%</span></div>
-</div>
-<div class="g-tag">18x cheaper</div>
-
+<div class="lb rv r1" style="left:14px;top:13px;">Claude Haiku</div><div class="bar bw w1" style="left:110px;top:16px;width:274px;background:#C0C0C0;opacity:1"></div><div class="lb rv r1" style="left:400px;top:13px;">98%</div><div class="lb rv r2" style="left:14px;top:39px;">Nova Lite</div><div class="bar bw w2" style="left:110px;top:42px;width:266px;background:#E10600;opacity:1"></div><div class="lb rv r2" style="left:400px;top:39px;">95%</div><div class="lb rv r3" style="left:14px;top:65px;">Model C</div><div class="bar bw w3" style="left:110px;top:68px;width:198px;background:#6A6A6C;opacity:1"></div><div class="lb rv r3" style="left:400px;top:65px;">71%</div><div class="lb rv r5" style="left:14px;top:100px;">Cost per 1,000 tasks</div><div class="lb rv r5" style="left:14px;top:126px;">Haiku</div><div class="bar bw w5" style="left:70px;top:130px;width:330px;background:#8A8A88;opacity:1"></div><div class="lb rv r6" style="left:14px;top:148px;">Nova Lite</div><div class="bar bw w6" style="left:82px;top:152px;width:18px;background:#E10600;opacity:1"></div><div class="pillr rv r7" style="right:14px;top:138px">18x cheaper</div>
 </sc-if>
 <sc-if value="{{c.is4}}" hint-placeholder-val="{{ false }}">
-<div style="position:absolute;left:14px;right:14px;top:14px;height:90px"><div class="d-row"></div><div class="d-row f2"></div><div class="d-row"></div><div class="d-row f4"></div><div class="d-sweep"></div></div>
-
+<div class="chip drf" style="left:14px;top:14px">S3</div><div class="chip " style="left:122px;top:14px">IAM</div><div class="chip " style="left:230px;top:14px">Lambda</div><div class="chip " style="left:338px;top:14px">EventBridge</div><div class="chip " style="left:14px;top:54px">EC2</div><div class="chip " style="left:122px;top:54px">VPC</div><div class="chip " style="left:230px;top:54px">KMS</div><div class="chip " style="left:338px;top:54px">RDS</div><div class="rv r4" style="position:absolute;left:14px;top:100px;right:14px;height:30px;border:1px solid #E10600;border-radius:8px;background:rgba(225,6,0,.22);display:flex;align-items:center;padding:0 12px;font-size:12.5px;font-weight:700;color:#FFB4AE">Slack alert: S3 bucket opened to the public</div><div class="lb rv r6" style="left:14px;top:138px;">Fixed with a Terraform pull request</div><div class="bar bw w7" style="left:14px;top:166px;width:326px;background:#E10600;opacity:1"></div><div class="lb rv r7" style="left:350px;top:160px;color:#FFFFFF;font-size:14px">11 of 11</div>
 </sc-if>
 <sc-if value="{{c.is5}}" hint-placeholder-val="{{ false }}">
-<div class="m-lane" style="top:27px"></div><div class="m-lane" style="top:55px"></div><div class="m-lane" style="top:83px"></div>
-<div class="m-dot" style="top:23px"></div><div class="m-dot dup" style="top:51px;animation-delay:.4s"></div><div class="m-dot" style="top:79px;animation-delay:.8s"></div>
-<div style="position:absolute;right:14px;top:20px;width:92px;height:70px;border:1.5px solid #8A8A88;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#E7E7E5;gap:3px"><span>DuckDB</span><span style="color:#C0C0C0;font-weight:600">8,020 unique</span></div>
-
+<div class="lb rv r1" style="left:14px;top:14px;">Source A</div><div style="position:absolute;left:84px;top:24px;width:240px;height:2px;background:#444"></div><div class="m-dot" style="top:20px;left:84px;animation-delay:0.0s"></div><div class="lb rv r1" style="left:14px;top:40px;">Source B</div><div style="position:absolute;left:84px;top:50px;width:240px;height:2px;background:#444"></div><div class="m-dot" style="top:46px;left:84px;animation-delay:0.4s"></div><div class="lb rv r1" style="left:14px;top:66px;">Source C</div><div style="position:absolute;left:84px;top:76px;width:240px;height:2px;background:#444"></div><div class="m-dot" style="top:72px;left:84px;animation-delay:0.8s"></div><div style="position:absolute;right:14px;top:14px;width:96px;height:76px;border:1.5px solid #8A8A88;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#E7E7E5;font-size:13px;font-weight:700">DuckDB</div><div class="lb rv r3" style="left:14px;top:102px;">Collected</div><div class="bar bw w3" style="left:100px;top:106px;width:300px;background:#8A8A88;opacity:1"></div><div class="lb rv r3" style="left:410px;top:100px;">8,224</div><div class="lb rv r5" style="left:14px;top:128px;">Unique</div><div class="bar bw w5" style="left:100px;top:132px;width:292px;background:#E10600;opacity:1"></div><div class="lb rv r5" style="left:410px;top:126px;">8,020</div><div class="pills rv r7" style="left:14px;top:154px">204 duplicates dropped</div>
 </sc-if>
 <sc-if value="{{c.is6}}" hint-placeholder-val="{{ false }}">
-<div style="position:absolute;left:14px;top:18px;display:grid;grid-template-columns:repeat(6,22px);gap:6px"><span class="f-sq"></span><span class="f-sq" style="animation-delay:.1s"></span><span class="f-sq" style="animation-delay:.2s"></span><span class="f-sq" style="animation-delay:.3s"></span><span class="f-sq fl" style="animation-delay:.4s"></span><span class="f-sq" style="animation-delay:.5s"></span><span class="f-sq" style="animation-delay:.6s"></span><span class="f-sq" style="animation-delay:.7s"></span><span class="f-sq" style="animation-delay:.8s"></span><span class="f-sq fl" style="animation-delay:.9s"></span><span class="f-sq" style="animation-delay:1s"></span><span class="f-sq" style="animation-delay:1.1s"></span></div>
-<div class="f-tag">Issue opened</div>
-
+<div class="sq" style="left:14px;top:14px;animation-name:q0"></div><div class="sq" style="left:46px;top:14px;animation-name:q1"></div><div class="sq" style="left:78px;top:14px;animation-name:q2"></div><div class="sq" style="left:110px;top:14px;animation-name:q3"></div><div class="sq" style="left:142px;top:14px;animation-name:q4"></div><div class="sq" style="left:174px;top:14px;animation-name:q5"></div><div class="sq" style="left:206px;top:14px;animation-name:q6"></div><div class="sq" style="left:238px;top:14px;animation-name:q7"></div><div class="sq" style="left:14px;top:46px;animation-name:q8"></div><div class="sq" style="left:46px;top:46px;animation-name:q9"></div><div class="sq" style="left:78px;top:46px;animation-name:q10"></div><div class="sq" style="left:110px;top:46px;animation-name:q11"></div><div class="sq" style="left:142px;top:46px;animation-name:q12"></div><div class="sq" style="left:174px;top:46px;animation-name:q13"></div><div class="sq" style="left:206px;top:46px;animation-name:q14"></div><div class="sq" style="left:238px;top:46px;animation-name:q15"></div><div class="sq" style="left:14px;top:78px;animation-name:q16"></div><div class="sq" style="left:46px;top:78px;animation-name:q17"></div><div class="sq" style="left:78px;top:78px;animation-name:q18"></div><div class="sq" style="left:110px;top:78px;animation-name:q19"></div><div class="sq" style="left:142px;top:78px;animation-name:q20"></div><div class="sq" style="left:174px;top:78px;animation-name:q21"></div><div class="sq" style="left:206px;top:78px;animation-name:q22"></div><div class="sq" style="left:238px;top:78px;animation-name:q23"></div><div class="pillr rv r6" style="right:14px;top:18px">Issue opened</div><div class="lb rv r2" style="left:14px;top:116px;">3 of 74 CI runs shown</div><div class="mono rv r7" style="position:absolute;left:14px;top:142px;color:#FFFFFF;font-weight:700">6 of 6 flaky tests found</div><div class="pills rv r8" style="right:14px;top:136px">0 false alarms</div>
 </sc-if>
 </div>
-<div style="padding:16px 32px 0;display:flex;flex-direction:column;gap:11px">
+</div><div style="grid-column:1;grid-row:3;min-width:0;display:flex;flex-direction:column"><div style="padding:18px 32px 0;display:flex;flex-direction:column;gap:10px">
 <sc-for list="{{c.points}}" as="pt" hint-placeholder-count="3">
-<div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:0 0 7px;height:7px;margin-top:9px;background:#E10600"></span><span style="font-size:14.5px;line-height:1.5">{{pt.t}}</span></div>
+<div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:0 0 8px;height:8px;margin-top:11px;background:#E10600"></span><span style="font-size:17px;line-height:1.4">{{pt.t}}</span></div>
 </sc-for>
 </div>
-<div style="margin-top:auto;padding:0 32px 26px">
+<div style="margin-top:auto;padding:14px 32px 28px">
 <div style="display:flex;flex-wrap:wrap;gap:7px;margin-bottom:16px">
 <sc-for list="{{c.chips}}" as="ch" hint-placeholder-count="4">
-<span style="font-size:12px;font-weight:700;padding:5px 11px;border-radius:999px;background:#2A2A2A;color:#F4F4F2">{{ch.t}}</span>
+<span style="font-size:14px;font-weight:700;padding:5px 13px;border-radius:999px;background:#2A2A2A;color:#F4F4F2">{{ch.t}}</span>
 </sc-for>
 </div>
 <div style="display:flex;gap:10px">
-<a class="pl dark" href="{{c.repo}}">GitHub</a>
+<a class="pl dark" href="{{c.repo}}" target="_blank" rel="noopener">View on GitHub</a>
 <sc-if value="{{c.hasDemo}}" hint-placeholder-val="{{ false }}"><a class="pl line" href="https://repoprobe-afd1.onrender.com">Try it live</a></sc-if>
+</div>
 </div>
 </div>
 <sc-if value="{{c.notCenter}}" hint-placeholder-val="{{ false }}"><button aria-label="{{c.label}}" onClick="{{c.pick}}" style="position:absolute;top:0;right:0;bottom:0;left:0;z-index:3;border:0;background:transparent;cursor:pointer;padding:0"></button></sc-if>
@@ -200,29 +244,11 @@ a:focus-visible,button:focus-visible{outline:2px solid #FFFFFF;outline-offset:3p
 </sc-for>
 </div>
 
-<div style="display:flex;flex-direction:column;align-items:center;gap:22px;padding:8px 0 8px">
-<div style="font-size:14px;font-weight:700;letter-spacing:0.14em;color:#FF5A4D">{{counter}}</div>
-<div style="display:flex;align-items:center;gap:20px">
-<button class="cbtn" aria-label="Previous" disabled="{{atStart}}" onClick="{{prev}}" style="border:1.5px solid #C0C0C0;background:transparent;color:#F4F4F2;padding:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></button>
-<div style="display:flex;align-items:center;gap:8px">
-<sc-for list="{{dots}}" as="d" hint-placeholder-count="7">
-<button aria-label="{{d.label}}" onClick="{{d.pick}}" style="border:0;padding:12px 0;background:transparent;cursor:pointer"><span style="display:block;width:30px;height:3px;background:{{d.color}};transition:background .3s ease"></span></button>
-</sc-for>
-</div>
-<button class="cbtn" aria-label="Next" disabled="{{atEnd}}" onClick="{{next}}" style="border:0;background:#E10600;color:#FFFFFF;padding:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></button>
-</div>
-
-</div>
 </section>
 
 
 
-<footer style="position:relative;z-index:2;padding:72px 56px 64px">
-<h2 class="rise-h" style="margin:0 0 28px;font-weight:800;font-size:48px;letter-spacing:-0.035em;color:#FFFFFF">Resume</h2>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:24px">
-<div class="gl shine" style="background:linear-gradient(160deg,rgba(255,255,255,0.14),rgba(255,255,255,0.04));border:1px solid rgba(255,255,255,0.2);-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4);border-radius:26px;padding:34px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px"><div style="font-weight:800;font-size:28px;color:#FFFFFF">AI and Software</div><a class="rbtn" href="Resume_AI_Software.pdf" download>Download PDF</a></div>
-<div class="gl shine" style="background:linear-gradient(160deg,rgba(255,255,255,0.14),rgba(255,255,255,0.04));border:1px solid rgba(255,255,255,0.2);-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4);border-radius:26px;padding:34px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px"><div style="font-weight:800;font-size:28px;color:#FFFFFF">Cloud and Data</div><a class="rbtn" href="Resume_Cloud_Data.pdf" download>Download PDF</a></div>
-</div></footer>
+
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1900}}'>
@@ -268,24 +294,24 @@ class Component extends DCLogic {
 constructor(props) { super(props); this.state = { i: 0 }; this._sx = null; this._t = 0; }
 go(d) {
 const n = ITEMS.length;
-this.setState((s) => ({ i: Math.max(0, Math.min(n - 1, s.i + d)) }));
+this.setState((s) => ({ i: (s.i + d + ITEMS.length) % ITEMS.length }));
 }
 renderVals() {
 const n = ITEMS.length;
 const i = this.state.i;
 const pad = (x) => (x < 10 ? '0' + x : '' + x);
 const cards = ITEMS.map((it, k) => {
-const off = k - i;
+let off = k - i; if (off > n / 2) off -= n; if (off < -n / 2) off += n;
 const a = Math.abs(off);
 const far = a > 2;
-const slotStyle = 'transform:translateX(' + (off * 350) + 'px) translateZ(' + (-a * 190) + 'px) rotateY(' + (-off * 24) + 'deg);opacity:' + (far ? 0 : (1 - a * 0.2)) + ';filter:grayscale(' + Math.min(1, a) + ') brightness(' + (1 - Math.min(a, 2) * 0.1) + ');z-index:' + (10 - a) + ';pointer-events:' + (far ? 'none' : 'auto');
+const slotStyle = 'transform:translateX(' + (off * 540) + 'px) translateZ(' + (-a * 190) + 'px) rotateY(' + (-off * 24) + 'deg);opacity:' + (far ? 0 : (1 - a * 0.2)) + ';filter:grayscale(' + Math.min(1, a) + ') brightness(' + (1 - Math.min(a, 2) * 0.1) + ');z-index:' + (10 - a) + ';pointer-events:' + (far ? 'none' : 'auto');
 return {
 slotStyle,
 num: it.num, numLabel: it.numLabel, name: it.name, tagline: it.tagline, repo: it.repo, hasDemo: it.hasDemo,
 points: it.points.map((t) => ({ t })),
 chips: it.chips.map((t) => ({ t })),
 notCenter: off !== 0,
-play: off === 0 ? 'running' : 'paused',
+play: 'running',
 is0: k === 0, is1: k === 1, is2: k === 2, is3: k === 3, is4: k === 4, is5: k === 5, is6: k === 6,
 label: 'Show ' + it.name,
 pick: () => this.setState({ i: k })
@@ -294,8 +320,8 @@ pick: () => this.setState({ i: k })
 return {
 cards,
 counter: pad(i + 1) + ' / ' + pad(n),
-atStart: i === 0,
-atEnd: i === n - 1,
+atStart: false,
+atEnd: false,
 prev: () => this.go(-1),
 next: () => this.go(1),
 dots: ITEMS.map((it, k) => ({ label: 'Go to ' + it.name, color: k === i ? '#E10600' : '#5A5A5C', pick: () => this.setState({ i: k }) })),
@@ -319,6 +345,9 @@ else if (e.key === 'ArrowLeft') this.go(-1);
 };
 }
 }
+</script>
+<script>
+(function(){function fit(){var st=document.getElementById('pstage');if(!st)return;var z=Math.max(.55,Math.min(1.5,(window.innerHeight-275)/880));st.style.zoom=z;}window.addEventListener('resize',fit);window.addEventListener('load',function(){fit();setTimeout(fit,300);setTimeout(fit,1200)});})();
 </script>
 </body>
 </html>

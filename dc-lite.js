@@ -172,3 +172,41 @@
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
 })();
+
+
+/* Inside the single scrolling page: the parent draws one shared menu, so hide this page's own menu (keeping its space). */
+(function () {
+  if (window.parent === window) return;
+  var st = document.createElement('style');
+  st.textContent = 'nav{visibility:hidden!important;margin-bottom:-15px!important}html{overflow:hidden!important}';
+  document.head.appendChild(st);
+  function send() {
+    var d = document, h = Math.max(d.documentElement.scrollHeight, d.body ? d.body.scrollHeight : 0);
+    window.parent.postMessage({ type: 'pf-height', h: h }, '*');
+  }
+  document.addEventListener('DOMContentLoaded', function () { send(); setInterval(send, 400); });
+  window.addEventListener('load', send);
+  var last = 0;
+  document.addEventListener('mousemove', function (e) {
+    var n = Date.now(); if (n - last < 40) return; last = n;
+    window.parent.postMessage({ type: 'pf-mouse', x: e.clientX, y: e.clientY }, '*');
+  });
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href]'); if (!a) return;
+    var h = a.getAttribute('href') || '';
+    if (/^[a-z]+\.html/i.test(h)) { e.preventDefault(); window.parent.postMessage({ type: 'pf-go', to: h.split('.html')[0].toLowerCase() }, '*'); }
+    else if (/^https?:|^mailto:/.test(h)) { a.target = '_blank'; a.rel = 'noopener'; }
+  });
+})();
+
+/* Report where the page's animated gradient is, so the shared mascot can wear the opposite dress colour. */
+(function () {
+  if (window.parent === window) return;
+  setInterval(function () {
+    var w = document.querySelector('.wash'); if (!w) return;
+    var v = getComputedStyle(w).backgroundPositionX, p = parseFloat(v);
+    if (isNaN(p)) return;
+    if (/px/.test(v)) p = -p / (0.7 * (w.clientWidth || 1));
+    window.parent.postMessage({ type: 'pf-wash', p: p }, '*');
+  }, 300);
+})();

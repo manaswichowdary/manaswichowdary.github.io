@@ -4,80 +4,65 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contact | Manaswi Makkena</title>
-<script src="dc-lite.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..500&family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap">
 <style>
-body{margin:0}
-a{color:inherit}
-a:focus-visible,button:focus-visible{outline:2px solid #FFFFFF;outline-offset:3px;border-radius:6px}
-.nl{color:#F4F4F2;text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}
-.nl:hover{border-bottom-color:#E10600}
-.nl.on{border-bottom-color:#E10600}
-.btnr{display:inline-block;background:#E10600;color:#FFFFFF;padding:15px 28px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none}
-.btnr:hover{background:#B80500}
-.slot{position:absolute;left:50%;top:36px;margin-left:-240px;width:480px;transition:transform .7s cubic-bezier(.2,.7,.2,1),opacity .5s ease,filter .5s ease}
-.face{transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s ease}
-.face:hover{transform:translateY(-16px) scale(1.035);box-shadow:0 44px 70px -24px rgba(0,0,0,.6)}
-.cbtn{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:transform .2s ease,background .2s ease}
-.cbtn:hover:not(:disabled){transform:scale(1.08)}
-.cbtn:disabled{opacity:.35;cursor:default}
-@media (prefers-reduced-motion:reduce){.slot,.face,.cbtn{transition:none}}
-.wc{transition:transform .3s ease,box-shadow .3s ease}.wc:hover{transform:translateY(-8px)}
-
-.rise-h{animation:riseH .9s cubic-bezier(.2,.8,.2,1) both}
-@keyframes riseH{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
-.fadeIn{animation:riseH .9s ease both}
-.orb{position:absolute;border-radius:50%;filter:blur(100px);pointer-events:none;z-index:0}
-.orb.r{background:rgba(225,6,0,0.30)}.orb.s{background:rgba(192,192,192,0.14)}
-.o1{animation:oA 18s ease-in-out infinite alternate}.o2{animation:oB 22s ease-in-out infinite alternate}
-@keyframes oA{0%{transform:translate(0,0)}100%{transform:translate(240px,180px)}}
-@keyframes oB{0%{transform:translate(0,0)}100%{transform:translate(-220px,-140px)}}
-.gl{transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease}
-.gl:hover{transform:translateY(-8px);border-color:rgba(255,255,255,0.45);box-shadow:0 28px 50px -24px rgba(225,6,0,0.55)}
-.rbtn{display:inline-block;background:linear-gradient(180deg,#FF2A20,#E10600 55%,#B80500);color:#fff;padding:14px 26px;border-radius:999px;font-weight:800;font-size:16px;text-decoration:none;box-shadow:0 12px 30px -8px rgba(225,6,0,0.7),inset 0 1px 0 rgba(255,255,255,0.4);transition:transform .2s ease}
-.rbtn:hover{transform:translateY(-3px)}
-.shine{position:relative;overflow:hidden}
-.shine:after{content:"";position:absolute;top:0;right:0;bottom:0;left:0;background:linear-gradient(115deg,transparent 38%,rgba(255,255,255,0.22) 50%,transparent 62%);background-size:260% 100%;background-position:150% 0;animation:shn 7s ease-in-out infinite;pointer-events:none}
-@keyframes shn{0%{background-position:150% 0}40%,100%{background-position:-50% 0}}
-@media (prefers-reduced-motion:reduce){.rise-h,.fadeIn,.orb,.shine:after{animation:none}}
-.wash{position:absolute;top:0;right:0;bottom:0;left:0;z-index:0;pointer-events:none;background:radial-gradient(circle at 14% 8%,rgba(225,6,0,0.20),transparent 28%),radial-gradient(circle at 88% 38%,rgba(192,192,192,0.16),transparent 34%),radial-gradient(circle at 24% 88%,rgba(225,6,0,0.12),transparent 30%);background-size:170% 170%;animation:washMove 16s ease-in-out infinite alternate}
-@keyframes washMove{0%{background-position:0% 0%}100%{background-position:100% 100%}}
-.orb.r{background:rgba(225,6,0,0.22)}.orb.s{background:rgba(192,192,192,0.14)}
+html,body{margin:0}body{background:#141415}*{box-sizing:border-box}a{color:inherit}
+#root{position:relative;height:100vh;min-height:600px;overflow:hidden;display:flex;flex-direction:column;background:linear-gradient(180deg,#222224 0%,#141415 100%);color:#F4F4F2;font-family:'Manrope',system-ui,sans-serif}
+.wash{position:absolute;inset:0;z-index:0;pointer-events:none;background:radial-gradient(circle at 12% 10%,rgba(225,6,0,.24),transparent 32%),radial-gradient(circle at 90% 75%,rgba(192,192,192,.14),transparent 34%),radial-gradient(circle at 40% 100%,rgba(225,6,0,.14),transparent 30%);background-size:170% 170%;animation:wm 16s ease-in-out infinite alternate}
+@keyframes wm{0%{background-position:0 0}100%{background-position:100% 100%}}
+.nl{color:#F4F4F2;text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}.nl.on{border-bottom-color:#E10600}
+main{position:relative;z-index:2;flex:1 1 auto;min-height:0;display:flex;flex-direction:column;align-items:center;justify-content:space-evenly;padding:0 56px clamp(8px,1.5vh,20px);text-align:center}
+h1{margin:0;font-weight:800;font-size:clamp(44px,9vh,96px);line-height:1;letter-spacing:-.04em}
+.sub{margin:clamp(6px,1.2vh,14px) 0 0;font-size:clamp(20px,3vh,32px);font-weight:600;color:#D8D8D6}
+.bar{width:min(1800px,100%);display:grid;grid-template-columns:repeat(4,auto);justify-content:space-between;border-radius:999px;padding:clamp(10px,1.8vh,22px) clamp(14px,1.6vw,30px);background:linear-gradient(160deg,rgba(255,255,255,.14),rgba(255,255,255,.04));border:1.5px solid rgba(255,255,255,.3);-webkit-backdrop-filter:blur(16px) saturate(1.3);backdrop-filter:blur(16px) saturate(1.3);box-shadow:0 26px 50px -28px rgba(0,0,0,.7),inset 0 1px 0 rgba(255,255,255,.3)}
+.seg{display:flex;align-items:center;gap:clamp(10px,1vw,18px);text-decoration:none;text-align:left;padding:clamp(6px,1vh,12px) clamp(10px,1.2vw,22px);border-radius:999px;min-width:0;transition:background .25s,transform .25s}
+.seg:hover,.seg:focus-visible{background:rgba(225,6,0,.22);transform:translateY(-3px);outline:none}
+.ico{flex:0 0 auto;width:calc(clamp(40px,min(4.1vw,7.6vh),76px)*var(--k,1));height:calc(clamp(40px,min(4.1vw,7.6vh),76px)*var(--k,1));border-radius:50%;display:flex;align-items:center;justify-content:center;background:#E10600;color:#fff;box-shadow:0 10px 22px -10px rgba(225,6,0,.8)}
+.ico svg{width:55%;height:55%}
+.tx{display:flex;flex-direction:column;min-width:0;gap:2px}.tx b{font-size:calc(clamp(14px,min(1.32vw,2.6vh),27px)*var(--k,1));font-weight:800}.tx i{font-style:normal;font-size:calc(clamp(12px,min(1.15vw,2.3vh),23px)*var(--k,1));font-weight:600;color:#D8D8D6;white-space:nowrap}
+.rs{display:flex;flex-direction:column;align-items:center;gap:clamp(10px,1.8vh,20px);width:100%}
+.rs h2{margin:0;font-size:clamp(24px,3.6vh,38px);font-weight:800;letter-spacing:-.02em}
+.rr{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(12px,1.6vw,26px)}
+.rb{display:flex;align-items:center;gap:14px;text-decoration:none;font-weight:800;font-size:clamp(17px,2.5vh,26px);padding:clamp(14px,2.2vh,26px) clamp(24px,2.6vw,48px);border-radius:999px;color:#fff;background:linear-gradient(180deg,#FF2A20,#E10600 55%,#B80500);box-shadow:0 14px 30px -10px rgba(225,6,0,.75),inset 0 1px 0 rgba(255,255,255,.4);transition:transform .2s}
+.rb:hover,.rb:focus-visible{transform:translateY(-4px);outline:none}
+.rb:nth-child(2){background:#F4F4F2;color:#1E1E1F;box-shadow:0 14px 30px -12px rgba(0,0,0,.7)}.rb:nth-child(2):hover{background:#E7E7E5}
+.cp{position:absolute;left:0;right:0;bottom:clamp(10px,2vh,24px);text-align:center;font-size:clamp(13px,1.8vh,17px);font-weight:600;color:#A8A8A6}
+@media (max-width:900px){.bar{grid-template-columns:1fr 1fr;justify-content:stretch;border-radius:34px}main{padding-left:20px;padding-right:20px}}
+@media (max-width:560px){.bar{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){.wash{animation:none}}
 </style>
-</helmet>
-<div style="background:linear-gradient(180deg,#212123 0%,#141415 100%);position:relative;overflow:hidden;color:#FFFFFF;font-family:'Manrope',system-ui,sans-serif;min-height:1500px">
-<div class="wash"></div><div class="orb s o1" style="width:640px;height:640px;left:-180px;top:-60px"></div><div class="orb s o2" style="width:560px;height:560px;right:-160px;top:520px"></div>
-
-<nav style="position:relative;z-index:5;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:24px 56px">
-<a href="index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:800;font-size:17px"><span style="width:58px;height:58px;display:block;position:relative;margin:-6px 0;flex:0 0 58px" aria-hidden="true"><span style="position:absolute;top:0;right:0;bottom:0;left:0;background:url(me-red-directions.webp) no-repeat;background-size:300% 300%;background-position:50% 50%"></span></span>Manaswi Makkena</a>
-<div style="display:flex;flex-wrap:wrap;align-items:center;gap:6px 28px;font-size:15px;font-weight:600">
-<a href="index.html" class="nl" style="color:#FFFFFF">Home</a>
-<a href="about.html" class="nl" style="color:#FFFFFF">About</a>
-<a href="education.html" class="nl" style="color:#FFFFFF">Education</a>
-<a href="experience.html" class="nl" style="color:#FFFFFF">Experience</a>
-<a href="projects.html" class="nl" style="color:#FFFFFF">Projects</a>
-<a href="skills.html" class="nl" style="color:#FFFFFF">Skills</a>
-<a href="contact.html" class="nl on" style="color:#FFFFFF">Contact</a>
-<a href="contact.html" style="background:#FFFFFF;color:#F4F4F2;padding:10px 20px;border-radius:999px;text-decoration:none">Resume</a>
-</div>
-</nav>
-<header style="position:relative;z-index:2;padding:40px 56px 0;text-align:center"><h1 class="rise-h" style="margin:0;font-weight:800;font-size:72px;line-height:1;letter-spacing:-0.04em;color:#FFFFFF">Contact</h1></header>
-<section style="position:relative;z-index:2;padding:48px 56px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:20px"><a href="mailto:manaswicmakkena@gmail.com" class="gl" style="display:flex;justify-content:space-between;align-items:center;gap:16px;background:linear-gradient(160deg,rgba(255,255,255,0.14),rgba(255,255,255,0.04));border:1px solid rgba(255,255,255,0.2);-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4);border-radius:22px;padding:26px 30px;text-decoration:none;color:#FFFFFF"><span><span style="display:block;font-size:14px;font-weight:700;color:#C0C0C0">Email</span><span style="display:block;margin-top:6px;font-size:24px;font-weight:800">manaswicmakkena@gmail.com</span></span><span style="font-weight:800;color:#FF5A4D">Open</span></a><a href="https://linkedin.com/in/manaswi01" class="gl" style="display:flex;justify-content:space-between;align-items:center;gap:16px;background:linear-gradient(160deg,rgba(255,255,255,0.14),rgba(255,255,255,0.04));border:1px solid rgba(255,255,255,0.2);-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4);border-radius:22px;padding:26px 30px;text-decoration:none;color:#FFFFFF"><span><span style="display:block;font-size:14px;font-weight:700;color:#C0C0C0">LinkedIn</span><span style="display:block;margin-top:6px;font-size:24px;font-weight:800">linkedin.com/in/manaswi01</span></span><span style="font-weight:800;color:#FF5A4D">Open</span></a><a href="https://github.com/manaswichowdary" class="gl" style="display:flex;justify-content:space-between;align-items:center;gap:16px;background:linear-gradient(160deg,rgba(255,255,255,0.14),rgba(255,255,255,0.04));border:1px solid rgba(255,255,255,0.2);-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4);border-radius:22px;padding:26px 30px;text-decoration:none;color:#FFFFFF"><span><span style="display:block;font-size:14px;font-weight:700;color:#C0C0C0">GitHub</span><span style="display:block;margin-top:6px;font-size:24px;font-weight:800">github.com/manaswichowdary</span></span><span style="font-weight:800;color:#FF5A4D">Open</span></a><a href="#" class="gl" style="display:flex;justify-content:space-between;align-items:center;gap:16px;background:linear-gradient(160deg,rgba(255,255,255,0.14),rgba(255,255,255,0.04));border:1px solid rgba(255,255,255,0.2);-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4);border-radius:22px;padding:26px 30px;text-decoration:none;color:#FFFFFF"><span><span style="display:block;font-size:14px;font-weight:700;color:#C0C0C0">Location</span><span style="display:block;margin-top:6px;font-size:24px;font-weight:800">Tempe, Arizona</span></span><span style="font-weight:800;color:#FF5A4D">Open</span></a></section>
-<footer style="position:relative;z-index:2;padding:72px 56px 64px">
-<h2 class="rise-h" style="margin:0 0 28px;font-weight:800;font-size:48px;letter-spacing:-0.035em;color:#FFFFFF">Resume</h2>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:24px">
-<div class="gl shine" style="background:linear-gradient(160deg,rgba(255,255,255,0.14),rgba(255,255,255,0.04));border:1px solid rgba(255,255,255,0.2);-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4);border-radius:26px;padding:34px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px"><div style="font-weight:800;font-size:28px;color:#FFFFFF">AI and Software</div><a class="rbtn" href="Resume_AI_Software.pdf" download>Download PDF</a></div>
-<div class="gl shine" style="background:linear-gradient(160deg,rgba(255,255,255,0.14),rgba(255,255,255,0.04));border:1px solid rgba(255,255,255,0.2);-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4);border-radius:26px;padding:34px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px"><div style="font-weight:800;font-size:28px;color:#FFFFFF">Cloud and Data</div><a class="rbtn" href="Resume_Cloud_Data.pdf" download>Download PDF</a></div>
-</div></footer>
-</div>
-</x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1500}}'>
-class Component extends DCLogic { renderVals() { return {}; } }
+<script src="dc-lite.js?v=4"></script>
+</head>
+<body>
+<div id="root"><div class="wash"></div>
+<nav style="position:relative;z-index:5;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:24px 56px;flex:0 0 auto">
+<a href="index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:800;font-size:17px"><span style="width:58px;height:58px;display:block;position:relative;margin:-6px 0;flex:0 0 58px" aria-hidden="true"><span style="position:absolute;inset:0;background:url(me-red-directions.webp) no-repeat;background-size:300% 300%;background-position:50% 50%"></span></span>Manaswi Makkena</a>
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:6px 28px;font-size:15px;font-weight:600"><a href="index.html" class="nl">Home</a><a href="about.html" class="nl">About</a><a href="education.html" class="nl">Education</a><a href="experience.html" class="nl">Experience</a><a href="projects.html" class="nl">Projects</a><a href="skills.html" class="nl">Skills</a><a href="contact.html" class="nl on">Contact</a></div></nav>
+<main>
+<div><h1>Contact Me</h1></div>
+<div class="bar"><a class="seg" href="https://github.com/manaswichowdary" target="_blank" rel="noopener"><span class="ico"><svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z" fill="currentColor"/></svg></span><span class="tx"><b>GitHub</b><i>github.com/manaswichowdary</i></span></a><a class="seg" href="https://www.linkedin.com/in/manaswi01" target="_blank" rel="noopener"><span class="ico"><svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z" fill="currentColor"/></svg></span><span class="tx"><b>LinkedIn</b><i>linkedin.com/in/manaswi01</i></span></a><a class="seg" href="tel:+16232819387" target="_self" rel="noopener"><span class="ico"><svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" fill="currentColor"/></svg></span><span class="tx"><b>Phone</b><i>(623) 281-9387</i></span></a><a class="seg" href="mailto:manaswicmakkena@gmail.com" target="_self" rel="noopener"><span class="ico"><svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.2L4.5 7v.3L12 12.6 19.5 7.3V7L12 12.2z" fill="currentColor"/></svg></span><span class="tx"><b>Email</b><i>manaswicmakkena@gmail.com</i></span></a></div>
+<div class="rs"><h2>Download My Resume</h2><div class="rr"><a class="rb" href="Manaswi-Makkena-Resume-AI-Software.pdf" download><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 20h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Resume for AI and Software Roles</span></a><a class="rb" href="Manaswi-Makkena-Resume-Cloud-Data.pdf" download><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 20h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Resume for Cloud and Data Roles</span></a></div></div>
+<div class="cp">Copyright © 2026 Manaswi Chowdary Makkena. All Rights Reserved.</div>
+</main></div>
+<script>
+(function(){
+var MAXK=1.75,GAP=30;
+function fit(){
+  var bar=document.querySelector('.bar');if(!bar||window.innerWidth<=900){if(bar)bar.style.removeProperty('--k');return}
+  var cs=getComputedStyle(bar),inner=bar.clientWidth-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight)-4;
+  var k=1;
+  for(var n=0;n<4;n++){
+    bar.style.setProperty('--k',k);
+    var sum=0,segs=bar.querySelectorAll('.seg');
+    for(var i=0;i<segs.length;i++)sum+=segs[i].getBoundingClientRect().width;
+    var nk=k*Math.max(0.5,(inner-(segs.length-1)*GAP)/sum);
+    k=Math.min(MAXK,Math.max(1,nk));
+  }
+  bar.style.setProperty('--k',k);
+}
+window.addEventListener('resize',fit);
+fit();setTimeout(fit,300);setTimeout(fit,1200);
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);
+})();
 </script>
-</body>
-</html>
+</body></html>

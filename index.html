@@ -1,33 +1,77 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Manaswi Makkena</title>
-<style>html{scroll-behavior:smooth;background:#141415}body{margin:0;background:#141415}
-section{display:block;width:100%;overflow:hidden}iframe{display:block;width:100%;border:0;height:900px;background:#141415}</style></head>
+<title>Manaswi Chowdary Makkena</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&display=swap">
+<style>
+html{scroll-behavior:smooth;background:#141415}
+body{margin:0;background:#141415;font-family:'Manrope',system-ui,sans-serif}
+section{display:block;width:100%;overflow:hidden}
+iframe{display:block;width:100%;border:0;height:100vh;background:#141415}
+#bar{position:fixed;z-index:50;top:20px;left:40px;right:40px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:16px 30px;border-radius:999px;background:linear-gradient(180deg,rgba(60,60,62,.55),rgba(30,30,31,.45));border:1px solid rgba(255,255,255,.22);box-shadow:0 18px 40px -22px rgba(0,0,0,.8),inset 0 1px 0 rgba(255,255,255,.3);-webkit-backdrop-filter:blur(18px) saturate(1.5);backdrop-filter:blur(18px) saturate(1.5)}
+#bar a{color:#F4F4F2;text-decoration:none}
+#brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:26px;white-space:nowrap}
+#mas{width:78px;height:78px;display:block;margin:-12px 0;flex:0 0 78px;background:url(me-black-directions.webp) no-repeat;background-size:300% 300%;background-position:50% 50%}
+#links{display:flex;flex-wrap:wrap;align-items:center;gap:6px 28px;font-size:19px;font-weight:700}
+.nl{padding:6px 0;border-bottom:2px solid transparent;transition:border-color .2s}
+.nl:hover,.nl.on{border-bottom-color:#E10600}
+#res{background:#F4F4F2;color:#1E1E1F!important;padding:12px 24px;border-radius:999px;font-weight:800;font-size:19px}
+@media (max-width:900px){#bar{left:12px;right:12px;border-radius:28px;padding:12px 18px}#links{gap:4px 18px;font-size:16px}#brand{font-size:22px}#mas{width:64px;height:64px;flex:0 0 64px}}
+</style></head>
 <body>
-<section id="home"><iframe src="home.html" title="Home"></iframe></section>
-<section id="about"><iframe src="about.html" title="About me"></iframe></section>
-<section id="education"><iframe src="education.html" title="Education"></iframe></section>
-<section id="experience"><iframe src="experience.html" title="Experience"></iframe></section>
-<section id="projects"><iframe src="projects.html" title="Projects"></iframe></section>
-<section id="skills"><iframe src="skills.html" title="Skills"></iframe></section>
-<section id="contact"><iframe src="contact.html" title="Contact"></iframe></section>
+<div id="bar">
+<a id="brand" href="#home"><span id="mas" role="button" aria-label="Boop the mascot"></span>Manaswi Makkena</a>
+<div id="links">
+<a class="nl on" href="#home">Home</a><a class="nl" href="#about">About</a><a class="nl" href="#education">Education</a><a class="nl" href="#experience">Experience</a><a class="nl" href="#projects">Projects</a><a class="nl" href="#skills">Skills</a><a class="nl" href="#contact">Contact</a>
+</div></div>
+<section id="home"><iframe src="home.html?v=4" title="Home"></iframe></section>
+<section id="about"><iframe src="about.html?v=4" title="About me"></iframe></section>
+<section id="education"><iframe src="education.html?v=4" title="Education"></iframe></section>
+<section id="experience"><iframe src="experience.html?v=4" title="Experience"></iframe></section>
+<section id="projects"><iframe src="projects.html?v=4" title="Projects"></iframe></section>
+<section id="skills"><iframe src="skills.html?v=4" title="Skills"></iframe></section>
+<section id="contact"><iframe src="contact.html?v=4" title="Contact"></iframe></section>
 <script>
-var MAP={'index':'home','home':'home','about':'about','education':'education','experience':'experience','projects':'projects','skills':'skills','contact':'contact'};
+var IDS=['home','about','education','experience','projects','skills','contact'];
 function go(id,push){var el=document.getElementById(id);if(!el)return;el.scrollIntoView({behavior:'smooth',block:'start'});if(push){try{history.replaceState(null,'','#'+id)}catch(e){}}}
-document.querySelectorAll('iframe').forEach(function(f){
-  function fit(){try{var d=f.contentDocument;if(!d||!d.body)return;var h=Math.max(d.documentElement.scrollHeight,d.body.scrollHeight);if(h&&Math.abs(h-f.offsetHeight)>1)f.style.height=h+'px';}catch(e){}}
-  f.addEventListener('load',function(){
-    var d=f.contentDocument;if(!d)return;
-    d.documentElement.style.overflow='hidden';
-    d.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;
-      var h=a.getAttribute('href')||'';var m=h.match(/^([a-z]+)\.html/i);
-      if(m&&MAP[m[1].toLowerCase()]){e.preventDefault();go(MAP[m[1].toLowerCase()],true);}
-      else if(/^https?:|^mailto:/.test(h)&&!a.target){a.target='_blank';a.rel='noopener';}
-    });
-    fit();setInterval(fit,500);
-    if(window.ResizeObserver)new ResizeObserver(fit).observe(d.body);
-    if(f.title==='Home'&&location.hash)setTimeout(function(){go(location.hash.slice(1))},300);
-  });
+document.querySelectorAll('#bar a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();go(a.getAttribute('href').slice(1),true)})});
+function setActive(){
+  var cur='home';
+  IDS.forEach(function(id){var r=document.getElementById(id).getBoundingClientRect();if(r.top<=window.innerHeight*0.35)cur=id});
+  document.querySelectorAll('#links .nl').forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+  curSec=cur;applySkin();
+}
+var curSec='home',wp={};
+new Image().src='me-black-directions.webp';new Image().src='me-red-directions.webp';
+function applySkin(){
+  var m=document.getElementById('mas'),p=wp[curSec],red=(p===undefined)?(curSec==='home'):(p<45);
+  var want=red?'me-black-directions.webp':'me-red-directions.webp';
+  if(m.dataset.s!==want){m.dataset.s=want;if(!poking)m.style.backgroundImage='url('+want+')'}
+}
+window.addEventListener('scroll',setActive,{passive:true});window.addEventListener('resize',function(){document.querySelector('#home iframe').style.height=window.innerHeight+'px';document.querySelector('#education iframe').style.height=window.innerHeight+'px';document.querySelector('#experience iframe').style.height=window.innerHeight+'px';document.querySelector('#skills iframe').style.height=window.innerHeight+'px';document.querySelector('#projects iframe').style.height=window.innerHeight+'px';document.querySelector('#contact iframe').style.height=window.innerHeight+'px';setActive()});
+var MAPD={'up-left':0,'up':1,'up-right':2,'left':3,'right':5,'down-left':6,'down':7,'down-right':8},ORD=['right','down-right','down','down-left','left','up-left','up','up-right'];
+function cellPos(k){return ((k%3)*50)+'% '+(Math.floor(k/3)*50)+'%'}
+var poking=false;
+function look(cx,cy){
+  if(poking)return;
+  var m=document.getElementById('mas'),r=m.getBoundingClientRect(),dx=cx-(r.left+r.width/2),dy=cy-(r.top+r.height/2),c=4;
+  if(Math.hypot(dx,dy)>90){var a=Math.atan2(dy,dx),k=(Math.round(a/(Math.PI/4))+8)%8;c=MAPD[ORD[k]]}
+  m.style.backgroundPosition=cellPos(c);
+}
+document.getElementById('mas').style.cursor='pointer';
+document.getElementById('mas').addEventListener('click',function(){
+  var m=this,dir=m.dataset.s||'me-black-directions.webp',rx=dir.replace('directions','reactions');poking=true;
+  m.style.backgroundImage='url('+rx+')';m.style.backgroundPosition=cellPos(0);
+  setTimeout(function(){m.style.backgroundPosition=cellPos([1,2,8][Math.floor(Math.random()*3)])},120);
+  setTimeout(function(){poking=false;m.style.backgroundImage='url('+dir+')';m.style.backgroundPosition=cellPos(4)},700);
 });
+document.addEventListener('mousemove',function(e){look(e.clientX,e.clientY)});
+window.addEventListener('message',function(e){var d=e.data||{};
+  var fs=document.querySelectorAll('iframe'),f=null;for(var i=0;i<fs.length;i++)if(fs[i].contentWindow===e.source)f=fs[i];
+  if(d.type==='pf-height'&&f){var hh=d.h;if(f.title==='Home')hh=window.innerHeight;if(f.title==='Education'||f.title==='Experience'||f.title==='Skills'||f.title==='Projects'||f.title==='Contact')hh=window.innerHeight;if(hh>100&&Math.abs(hh-f.offsetHeight)>1)f.style.height=hh+'px'}
+  else if(d.type==='pf-wash'&&f){wp[f.parentElement.id]=d.p;applySkin()}
+  else if(d.type==='pf-go'&&IDS.indexOf(d.to)>-1||d.to==='index')go(d.to==='index'?'home':d.to,true);
+  else if(d.type==='pf-mouse'&&f){var r=f.getBoundingClientRect();look(r.left+d.x,r.top+d.y)}
+});
+window.addEventListener('load',function(){setActive();if(location.hash)setTimeout(function(){go(location.hash.slice(1))},700)});
 window.addEventListener('hashchange',function(){go(location.hash.slice(1))});
 </script></body></html>
