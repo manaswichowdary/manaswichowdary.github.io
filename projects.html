@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects | Manaswi Makkena</title>
+<script src="dc-lite.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..500&family=Manrope:wght@400;500;600;700;800&display=swap">
+<style>
+body{margin:0}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid #FFFFFF;outline-offset:3px;border-radius:6px}
+.nl{color:#F4F4F2;text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}
+.nl:hover{border-bottom-color:#E10600}
+.nl.on{border-bottom-color:#E10600}
+.btnr{display:inline-block;background:#E10600;color:#FFFFFF;padding:15px 28px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none}
+.btnr:hover{background:#B80500}
+.pl{position:relative;z-index:2;display:inline-block;padding:10px 20px;border-radius:999px;font-weight:700;font-size:14px;text-decoration:none}
+.pl.dark{background:#F4F4F2;color:#1E1E1F}
+.pl.dark:hover{background:#E10600}
+.pl.line{border:1.5px solid #C0C0C0;color:#F4F4F2;padding:8.5px 18.5px}
+.pl.line:hover{background:#F4F4F2;color:#1E1E1F}
+.slot{position:absolute;left:50%;top:36px;margin-left:-240px;width:480px;transition:transform .7s cubic-bezier(.2,.7,.2,1),opacity .5s ease,filter .5s ease}
+.face{transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s ease}
+.face:hover{transform:translateY(-16px) scale(1.035);box-shadow:0 44px 70px -24px rgba(0,0,0,.6)}
+.cbtn{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:transform .2s ease,background .2s ease}
+.cbtn:hover:not(:disabled){transform:scale(1.08)}
+.cbtn:disabled{opacity:.35;cursor:default}
+.an{position:relative;height:190px;margin:16px 32px 0;border-radius:14px;background:rgba(0,0,0,0.4);border:1px solid rgba(255,255,255,0.12);overflow:hidden;color:#C0C0C0;font-size:10.5px;font-weight:700}
+.an .cap{position:absolute;left:14px;bottom:9px;font-size:10.5px;font-weight:600;color:#C0C0C0}
+.s-row{position:absolute;left:14px;right:14px;top:22px;display:flex;justify-content:space-between}
+.s-node{width:68px;height:44px;border:1.5px solid #8A8A88;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#E7E7E5;font-size:10px;background:#333}
+.s-node.w{animation:sKill 4s linear infinite both;animation-play-state:var(--play,paused)}
+.s-node.l{animation:sLand 4s linear infinite both;animation-play-state:var(--play,paused)}
+@keyframes sLand{0%,86%{border-color:#8A8A88;box-shadow:none}92%{border-color:#C0C0C0;box-shadow:0 0 16px #C0C0C0}100%{border-color:#8A8A88;box-shadow:none}}
+.s-kill{position:absolute;left:14px;top:76px;font-size:10px;color:#FF5A4D;opacity:0;animation:sMsg 4s linear infinite both;animation-play-state:var(--play,paused)}
+@keyframes sMsg{0%,48%{opacity:0}54%,72%{opacity:1}80%,100%{opacity:0}}
+.s-stat{flex:1;border:1px solid #555;border-radius:10px;padding:8px 10px;color:#C0C0C0;font-size:10px;line-height:1.3;background:#333}
+.s-stat b{display:block;font-size:20px;color:#FFFFFF}
+.s-stat.red{border-color:#E10600;background:rgba(225,6,0,0.34)}
+.s-stat.red b{color:#FF5A4D}
+.s-dot{position:absolute;top:38px;left:42px;width:12px;height:12px;border-radius:50%;background:#E10600;animation:sMove 4s linear infinite both;animation-play-state:var(--play,paused)}
+@keyframes sMove{0%{transform:translateX(0);opacity:0}8%{opacity:1}92%{opacity:1}100%{transform:translateX(320px);opacity:0}}
+@keyframes sKill{0%,45%{background:#333;border-color:#8A8A88}55%,70%{background:#E10600;border-color:#E10600}80%,100%{background:#333;border-color:#8A8A88}}
+.r-file{height:6px;border-radius:3px;background:#8A8A88;margin-bottom:5px}
+.r-out{height:6px;border-radius:3px;background:#C0C0C0;margin-bottom:8px;transform-origin:left;animation:rOut 4.5s ease infinite both;animation-play-state:var(--play,paused)}
+.r-sum{height:6px;border-radius:3px;background:#E10600;margin-bottom:8px;transform-origin:left;animation:rSum 4.5s ease infinite both;animation-play-state:var(--play,paused)}
+@keyframes rOut{0%,8%{transform:scaleX(0)}28%,92%{transform:scaleX(1)}100%{transform:scaleX(0)}}
+@keyframes rSum{0%,30%{transform:scaleX(0)}55%,92%{transform:scaleX(1)}100%{transform:scaleX(0)}}
+.c-row{position:absolute;left:14px;right:14px;display:flex;align-items:center;justify-content:space-between}
+.c-pill{font-size:10px;padding:4px 10px;border-radius:999px;transform-origin:right center;animation:cPop 4.2s ease infinite both;animation-play-state:var(--play,paused)}
+.c-pill.ok{background:#C0C0C0;color:#F4F4F2}
+.c-pill.bad{background:#E10600;color:#FFFFFF}
+@keyframes cPop{0%,6%{transform:scale(0)}18%,86%{transform:scale(1)}96%,100%{transform:scale(0)}}
+.g-bar{transform-origin:left;animation:gGrow 4.2s ease infinite both;animation-play-state:var(--play,paused)}
+@keyframes gGrow{0%,6%{transform:scaleX(0)}40%,90%{transform:scaleX(1)}100%{transform:scaleX(0)}}
+.g-tag{position:absolute;right:14px;bottom:8px;background:#E10600;color:#FFFFFF;font-size:10px;padding:4px 10px;border-radius:999px;transform-origin:right center;animation:cPop 4.2s ease 1s infinite both;animation-play-state:var(--play,paused)}
+.d-row{height:12px;border-radius:4px;background:#444;margin-bottom:8px}
+.d-row.f2{animation:dFlag2 4s linear infinite both;animation-play-state:var(--play,paused)}
+.d-row.f4{animation:dFlag4 4s linear infinite both;animation-play-state:var(--play,paused)}
+.d-sweep{position:absolute;left:0;right:0;top:0;height:2px;background:#E10600;box-shadow:0 0 12px #E10600;animation:dSweep 4s linear infinite both;animation-play-state:var(--play,paused)}
+@keyframes dSweep{0%{transform:translateY(0)}100%{transform:translateY(84px)}}
+@keyframes dFlag2{0%,28%{background:#444}34%,88%{background:#E10600}100%{background:#444}}
+@keyframes dFlag4{0%,72%{background:#444}78%,95%{background:#E10600}100%{background:#444}}
+.m-lane{position:absolute;left:14px;width:290px;height:2px;background:#444}
+.m-dot{position:absolute;left:14px;width:10px;height:10px;border-radius:50%;background:#C0C0C0;animation:mMove 3.6s ease-in infinite both;animation-play-state:var(--play,paused)}
+.m-dot.dup{animation-name:mDup}
+@keyframes mMove{0%{transform:translateX(0);opacity:0}10%{opacity:1}100%{transform:translateX(285px);opacity:1}}
+@keyframes mDup{0%{transform:translateX(0);opacity:0}10%{opacity:1}55%{transform:translateX(150px);background:#C0C0C0;opacity:1}70%{transform:translateX(165px);background:#E10600}100%{transform:translateX(175px);background:#E10600;opacity:0}}
+.f-sq{width:22px;height:22px;border-radius:5px;background:#555;animation:fRun 3.6s ease infinite both;animation-play-state:var(--play,paused)}
+.f-sq.fl{animation-name:fFlaky}
+@keyframes fRun{0%,15%{background:#555}30%,100%{background:#C0C0C0}}
+@keyframes fFlaky{0%,15%{background:#555}30%{background:#C0C0C0}50%{background:#E10600}68%{background:#C0C0C0}84%,100%{background:#E10600}}
+.f-tag{position:absolute;right:14px;top:36px;background:#E10600;color:#FFFFFF;font-size:10px;padding:5px 11px;border-radius:999px;transform-origin:right center;animation:cPop 3.6s ease 1.8s infinite both;animation-play-state:var(--play,paused)}
+@media (prefers-reduced-motion:reduce){.slot,.face,.cbtn{transition:none}.an *{animation:none !important}.c-pill,.g-tag,.f-tag,.g-bar,.r-out,.r-sum{transform:none !important}.s-dot{display:none}}
+
+.rise-h{animation:riseH .9s cubic-bezier(.2,.8,.2,1) both}
+@keyframes riseH{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
+.fadeIn{animation:riseH .9s ease both}
+.orb{position:absolute;border-radius:50%;filter:blur(100px);pointer-events:none;z-index:0}
+.orb.r{background:rgba(225,6,0,0.30)}.orb.s{background:rgba(192,192,192,0.14)}
+.o1{animation:oA 18s ease-in-out infinite alternate}.o2{animation:oB 22s ease-in-out infinite alternate}
+@keyframes oA{0%{transform:translate(0,0)}100%{transform:translate(240px,180px)}}
+@keyframes oB{0%{transform:translate(0,0)}100%{transform:translate(-220px,-140px)}}
+.gl{transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease}
+.gl:hover{transform:translateY(-8px);border-color:rgba(255,255,255,0.45);box-shadow:0 28px 50px -24px rgba(225,6,0,0.55)}
+.rbtn{display:inline-block;background:linear-gradient(180deg,#FF2A20,#E10600 55%,#B80500);color:#fff;padding:14px 26px;border-radius:999px;font-weight:800;font-size:16px;text-decoration:none;box-shadow:0 12px 30px -8px rgba(225,6,0,0.7),inset 0 1px 0 rgba(255,255,255,0.4);transition:transform .2s ease}
+.rbtn:hover{transform:translateY(-3px)}
+.shine{position:relative;overflow:hidden}
+.shine:after{content:"";position:absolute;top:0;right:0;bottom:0;left:0;background:linear-gradient(115deg,transparent 38%,rgba(255,255,255,0.22) 50%,transparent 62%);background-size:260% 100%;background-position:150% 0;animation:shn 7s ease-in-out infinite;pointer-events:none}
+@keyframes shn{0%{background-position:150% 0}40%,100%{background-position:-50% 0}}
+@media (prefers-reduced-motion:reduce){.rise-h,.fadeIn,.orb,.shine:after{animation:none}}
+.wash{position:absolute;top:0;right:0;bottom:0;left:0;z-index:0;pointer-events:none;background:radial-gradient(circle at 14% 8%,rgba(225,6,0,0.20),transparent 28%),radial-gradient(circle at 88% 38%,rgba(192,192,192,0.16),transparent 34%),radial-gradient(circle at 24% 88%,rgba(225,6,0,0.12),transparent 30%);background-size:170% 170%;animation:washMove 16s ease-in-out infinite alternate}
+@keyframes washMove{0%{background-position:0% 0%}100%{background-position:100% 100%}}
+.orb.r{background:rgba(225,6,0,0.22)}.orb.s{background:rgba(192,192,192,0.14)}
+@media (prefers-reduced-motion:reduce){.wash{animation:none}}
+</style>
+</helmet>
+<div style="background:linear-gradient(180deg,#1F1F21 0%,#141415 100%);position:relative;overflow:hidden;color:#F4F4F2;font-family:'Manrope',system-ui,sans-serif;min-height:1900px" onKeyDown="{{keys}}">
+<div class="wash"></div><div class="orb s o1" style="width:640px;height:640px;left:-180px;top:-60px"></div><div class="orb r o2" style="width:560px;height:560px;right:-160px;top:520px"></div>
+
+
+<nav style="position:relative;z-index:5;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:24px 56px">
+<a href="index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:800;font-size:17px"><span style="width:58px;height:58px;display:block;position:relative;margin:-6px 0;flex:0 0 58px" aria-hidden="true"><span style="position:absolute;top:0;right:0;bottom:0;left:0;background:url(me-red-directions.webp) no-repeat;background-size:300% 300%;background-position:50% 50%"></span></span>Manaswi Makkena</a>
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:6px 28px;font-size:15px;font-weight:600">
+<a href="index.html" class="nl">Home</a>
+<a href="about.html" class="nl">About</a>
+<a href="education.html" class="nl">Education</a>
+<a href="experience.html" class="nl">Experience</a>
+<a href="projects.html" class="nl on">Projects</a>
+<a href="skills.html" class="nl">Skills</a>
+<a href="contact.html" class="nl">Contact</a>
+<a href="contact.html" style="background:#F4F4F2;color:#1E1E1F;padding:10px 20px;border-radius:999px;text-decoration:none">Resume</a>
+</div>
+</nav>
+
+<header style="position:relative;z-index:2;padding:40px 56px 0;text-align:center"><h1 class="rise-h" style="margin:0;font-weight:800;font-size:72px;line-height:1;letter-spacing:-0.04em">Projects</h1></header>
+
+<section style="position:relative;z-index:2;padding:12px 0 0">
+<div style="position:relative;height:910px;perspective:1900px;overflow:hidden;user-select:none" onPointerDown="{{down}}" onPointerUp="{{up}}" onWheel="{{wheel}}">
+<sc-for list="{{cards}}" as="c" hint-placeholder-count="7">
+<div class="slot" style="{{c.slotStyle}}">
+<div class="face" style="position:relative;width:480px;height:820px;background:linear-gradient(160deg,#3C3C3F,#242426);border:1px solid rgba(255,255,255,0.18);border-radius:24px;overflow:hidden;box-shadow:0 30px 60px -28px rgba(0,0,0,0.55);display:flex;flex-direction:column">
+<div style="height:10px;background:#E10600;flex:0 0 10px"></div>
+<div style="padding:26px 32px 0">
+<div style="font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:64px;line-height:1;letter-spacing:-0.02em;color:#FF5A4D">{{c.num}}</div>
+<div style="margin-top:6px;font-size:14px;font-weight:600;color:rgba(255,255,255,0.2)">{{c.numLabel}}</div>
+<h2 style="margin:20px 0 0;font-family:'Newsreader',Georgia,serif;font-weight:500;font-size:34px;line-height:1.08;letter-spacing:-0.01em">{{c.name}}</h2>
+
+</div>
+<div class="an" style="--play:{{c.play}}">
+<sc-if value="{{c.is0}}" hint-placeholder-val="{{ false }}">
+<div class="s-row" style="top:26px"><div class="s-node">API</div><div class="s-node">Outbox</div><div class="s-node">Kafka</div><div class="s-node w">Workers</div><div class="s-node l">Ledger</div></div>
+<div class="s-dot"></div><div class="s-dot" style="animation-delay:-1.3s"></div><div class="s-dot" style="animation-delay:-2.6s"></div>
+<div class="s-kill">Worker killed. The payment waits and retries.</div>
+<div style="position:absolute;left:14px;right:14px;top:104px;display:flex;gap:10px">
+<div class="s-stat"><b>20,000</b>payments sent</div><div class="s-stat"><b>2,115</b>client retries</div><div class="s-stat red"><b>0</b>lost</div>
+</div>
+
+</sc-if>
+<sc-if value="{{c.is1}}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;left:14px;top:14px;width:120px"><div style="margin-bottom:8px;color:#8A8A88">Repo files</div><div class="r-file" style="width:100%"></div><div class="r-file" style="width:82%"></div><div class="r-file" style="width:94%"></div><div class="r-file" style="width:70%"></div><div class="r-file" style="width:88%"></div><div class="r-file" style="width:60%"></div></div>
+<div style="position:absolute;left:160px;top:14px;width:96px"><div style="margin-bottom:8px;color:#8A8A88">Outline</div><div class="r-out" style="width:80%"></div><div class="r-out" style="width:60%;animation-delay:.2s"></div><div class="r-out" style="width:70%;animation-delay:.4s"></div></div>
+<div style="position:absolute;left:282px;top:14px;width:120px"><div style="margin-bottom:8px;color:#8A8A88">Summary</div><div class="r-sum" style="width:100%"></div><div class="r-sum" style="width:90%;animation-delay:.2s"></div><div class="r-sum" style="width:65%;animation-delay:.4s"></div></div>
+
+</sc-if>
+<sc-if value="{{c.is2}}" hint-placeholder-val="{{ false }}">
+<div class="c-row" style="top:16px"><span style="width:62%;height:6px;border-radius:3px;background:#8A8A88"></span><span class="c-pill ok">Supported</span></div>
+<div class="c-row" style="top:46px"><span style="width:48%;height:6px;border-radius:3px;background:#8A8A88"></span><span class="c-pill bad" style="animation-delay:.7s">Not found</span></div>
+<div class="c-row" style="top:76px"><span style="width:56%;height:6px;border-radius:3px;background:#8A8A88"></span><span class="c-pill ok" style="animation-delay:1.4s">Supported</span></div>
+
+</sc-if>
+<sc-if value="{{c.is3}}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;left:14px;right:14px;top:18px">
+<div style="display:flex;align-items:center;gap:10px;margin-bottom:12px"><span style="width:78px;color:#E7E7E5">Claude Haiku</span><span style="flex:1;height:10px;background:#444;border-radius:5px;overflow:hidden"><span class="g-bar" style="display:block;width:98%;height:100%;background:#C0C0C0"></span></span><span style="width:30px;color:#E7E7E5">98%</span></div>
+<div style="display:flex;align-items:center;gap:10px"><span style="width:78px;color:#E7E7E5">Nova Lite</span><span style="flex:1;height:10px;background:#444;border-radius:5px;overflow:hidden"><span class="g-bar" style="display:block;width:95%;height:100%;background:#E10600;animation-delay:.3s"></span></span><span style="width:30px;color:#E7E7E5">95%</span></div>
+</div>
+<div class="g-tag">18x cheaper</div>
+
+</sc-if>
+<sc-if value="{{c.is4}}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;left:14px;right:14px;top:14px;height:90px"><div class="d-row"></div><div class="d-row f2"></div><div class="d-row"></div><div class="d-row f4"></div><div class="d-sweep"></div></div>
+
+</sc-if>
+<sc-if value="{{c.is5}}" hint-placeholder-val="{{ false }}">
+<div class="m-lane" style="top:27px"></div><div class="m-lane" style="top:55px"></div><div class="m-lane" style="top:83px"></div>
+<div class="m-dot" style="top:23px"></div><div class="m-dot dup" style="top:51px;animation-delay:.4s"></div><div class="m-dot" style="top:79px;animation-delay:.8s"></div>
+<div style="position:absolute;right:14px;top:20px;width:92px;height:70px;border:1.5px solid #8A8A88;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#E7E7E5;gap:3px"><span>DuckDB</span><span style="color:#C0C0C0;font-weight:600">8,020 unique</span></div>
+
+</sc-if>
+<sc-if value="{{c.is6}}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;left:14px;top:18px;display:grid;grid-template-columns:repeat(6,22px);gap:6px"><span class="f-sq"></span><span class="f-sq" style="animation-delay:.1s"></span><span class="f-sq" style="animation-delay:.2s"></span><span class="f-sq" style="animation-delay:.3s"></span><span class="f-sq fl" style="animation-delay:.4s"></span><span class="f-sq" style="animation-delay:.5s"></span><span class="f-sq" style="animation-delay:.6s"></span><span class="f-sq" style="animation-delay:.7s"></span><span class="f-sq" style="animation-delay:.8s"></span><span class="f-sq fl" style="animation-delay:.9s"></span><span class="f-sq" style="animation-delay:1s"></span><span class="f-sq" style="animation-delay:1.1s"></span></div>
+<div class="f-tag">Issue opened</div>
+
+</sc-if>
+</div>
+<div style="padding:16px 32px 0;display:flex;flex-direction:column;gap:11px">
+<sc-for list="{{c.points}}" as="pt" hint-placeholder-count="3">
+<div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:0 0 7px;height:7px;margin-top:9px;background:#E10600"></span><span style="font-size:14.5px;line-height:1.5">{{pt.t}}</span></div>
+</sc-for>
+</div>
+<div style="margin-top:auto;padding:0 32px 26px">
+<div style="display:flex;flex-wrap:wrap;gap:7px;margin-bottom:16px">
+<sc-for list="{{c.chips}}" as="ch" hint-placeholder-count="4">
+<span style="font-size:12px;font-weight:700;padding:5px 11px;border-radius:999px;background:#2A2A2A;color:#F4F4F2">{{ch.t}}</span>
+</sc-for>
+</div>
+<div style="display:flex;gap:10px">
+<a class="pl dark" href="{{c.repo}}">GitHub</a>
+<sc-if value="{{c.hasDemo}}" hint-placeholder-val="{{ false }}"><a class="pl line" href="https://repoprobe-afd1.onrender.com">Try it live</a></sc-if>
+</div>
+</div>
+<sc-if value="{{c.notCenter}}" hint-placeholder-val="{{ false }}"><button aria-label="{{c.label}}" onClick="{{c.pick}}" style="position:absolute;top:0;right:0;bottom:0;left:0;z-index:3;border:0;background:transparent;cursor:pointer;padding:0"></button></sc-if>
+</div>
+</div>
+</sc-for>
+</div>
+
+<div style="display:flex;flex-direction:column;align-items:center;gap:22px;padding:8px 0 8px">
+<div style="font-size:14px;font-weight:700;letter-spacing:0.14em;color:#FF5A4D">{{counter}}</div>
+<div style="display:flex;align-items:center;gap:20px">
+<button class="cbtn" aria-label="Previous" disabled="{{atStart}}" onClick="{{prev}}" style="border:1.5px solid #C0C0C0;background:transparent;color:#F4F4F2;padding:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></button>
+<div style="display:flex;align-items:center;gap:8px">
+<sc-for list="{{dots}}" as="d" hint-placeholder-count="7">
+<button aria-label="{{d.label}}" onClick="{{d.pick}}" style="border:0;padding:12px 0;background:transparent;cursor:pointer"><span style="display:block;width:30px;height:3px;background:{{d.color}};transition:background .3s ease"></span></button>
+</sc-for>
+</div>
+<button class="cbtn" aria-label="Next" disabled="{{atEnd}}" onClick="{{next}}" style="border:0;background:#E10600;color:#FFFFFF;padding:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></button>
+</div>
+
+</div>
+</section>
+
+
+
+<footer style="position:relative;z-index:2;padding:72px 56px 64px">
+<h2 class="rise-h" style="margin:0 0 28px;font-weight:800;font-size:48px;letter-spacing:-0.035em;color:#FFFFFF">Resume</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:24px">
+<div class="gl shine" style="background:linear-gradient(160deg,rgba(255,255,255,0.14),rgba(255,255,255,0.04));border:1px solid rgba(255,255,255,0.2);-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4);border-radius:26px;padding:34px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px"><div style="font-weight:800;font-size:28px;color:#FFFFFF">AI and Software</div><a class="rbtn" href="Resume_AI_Software.pdf" download>Download PDF</a></div>
+<div class="gl shine" style="background:linear-gradient(160deg,rgba(255,255,255,0.14),rgba(255,255,255,0.04));border:1px solid rgba(255,255,255,0.2);-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4);border-radius:26px;padding:34px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px"><div style="font-weight:800;font-size:28px;color:#FFFFFF">Cloud and Data</div><a class="rbtn" href="Resume_Cloud_Data.pdf" download>Download PDF</a></div>
+</div></footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1900}}'>
+const ITEMS = [
+{ num: '0 lost', numLabel: 'of 20,000 payments', name: 'Settle', tagline: 'A payments ledger that cannot lose a payment', repo: 'https://github.com/manaswichowdary/settle', hasDemo: false, points: [
+'Built a payments ledger on Kafka and PostgreSQL with a transactional outbox, idempotency keys and double entry.',
+'Lost 0 of 20,000 payments and applied 0 twice while I killed workers 12 times and the API twice, with 2,115 client retries.',
+'Verified the full flow against real PostgreSQL and Kafka with Testcontainers in CI, running 1 API and 3 workers in Docker.'
+], chips: ['Java 21', 'Spring Boot', 'Kafka', 'PostgreSQL', 'Docker', 'Testcontainers'] },
+{ num: '5.0 s', numLabel: 'median time to summarize a repo', name: 'Repo Scanner', tagline: 'Explains how any GitHub repo is built', repo: 'https://github.com/manaswichowdary/repo-scanner', hasDemo: true, points: [
+'Published a PyPI command line tool that summarizes any GitHub repo, with all 10 test repos finishing under 15 seconds.',
+'Cut the tokens sent to the model by 84% (median across 6 Python repos) by sending code outlines instead of full files.',
+'Handled 8 failure cases with typed errors, offers Rich, JSON and Markdown output, and has 63 pytest tests. The web version runs on Render.'
+], chips: ['Python', 'OpenAI', 'GitHub REST API', 'FastAPI', 'PyPI'] },
+{ num: '78 of 80', numLabel: 'planted citation errors caught', name: 'Cite', tagline: 'Checks every citation in an AI answer', repo: 'https://github.com/manaswichowdary/cite', hasDemo: false, points: [
+'Caught 78 of 80 planted citation errors (98%) and accepted 20 of 20 true claims by verifying every judge quote in code.',
+'Raised supported sentences from 85.7% to 89.0% on the same 20 answers with local embeddings and a disk vector cache.',
+'Serves answers in a streaming FastAPI app with rate limits and a daily spend cap, at about $0.0015 per question.'
+], chips: ['Python', 'OpenAI API', 'Tavily', 'Sentence transformers', 'FastAPI', 'pytest'] },
+{ num: '18x', numLabel: 'lower cost at 95% against 98% accuracy', name: 'Gauge', tagline: 'Compares AI models on the same tasks', repo: 'https://github.com/manaswichowdary/gauge', hasDemo: false, points: [
+'Compared 8 model setups on 64 tasks. Nova Lite scored 95% against Claude Haiku at 98%, at about 18 times lower cost.',
+'Chose rule based scoring after hand labeling 62 answers. The rules agreed with me 98.4% of the time and an AI judge 83.9%.',
+'Added a CI gate that caught a deliberately broken prompt (accuracy 95% to 61%) in 62 seconds for under half a cent.'
+], chips: ['Python', 'AWS Bedrock', 'Streamlit', 'GitHub Actions'] },
+{ num: '11 of 11', numLabel: 'planted cloud mistakes caught', name: 'Cloud Drift Guard', tagline: 'Watches an AWS account for risky changes', repo: 'https://github.com/manaswichowdary/cloud-drift-guard', hasDemo: false, points: [
+'Caught 11 of 11 planted mistakes in a real AWS account with 20 rules for security, wasted spend and Terraform drift.',
+'Found and fixed 10 real issues in my own account on its first scheduled scan. Open findings are now 0.',
+'Runs every 5 minutes on Lambda with a read only IAM role, and alerts Slack on new findings only.',
+'Opened a real pull request with Terraform fixes for 2 safe findings and logged 5 accepted risks with review dates.'
+], chips: ['Python', 'AWS Lambda', 'EventBridge', 'S3', 'IAM', 'Terraform'] },
+{ num: '8,224', numLabel: 'job postings collected', name: 'MarketLens', tagline: 'A job market data pipeline', repo: 'https://github.com/manaswichowdary/marketlens', hasDemo: false, points: [
+'Collected 8,224 postings (8,020 unique) from 3 sources into DuckDB, with dbt data tests.',
+'Cut the measured duplicate rate to 2.5% by rewriting a matcher that merged different jobs, checked against merged pairs.',
+'Runs daily on Lambda and EventBridge with Slack alerts. Its first scheduled run took 107 seconds with no errors.'
+], chips: ['Python', 'DuckDB', 'dbt', 'AWS Lambda', 'EventBridge', 'S3'] },
+{ num: '6 of 6', numLabel: 'planted flaky tests found', name: 'Flaky Test Detector', tagline: 'Finds tests that fail at random', repo: 'https://github.com/manaswichowdary/flaky-test-detector', hasDemo: false, points: [
+'Found 6 of 6 planted flaky tests with 0 false alarms across 84 CI test runs, opening an issue a median of 0.6 minutes later.',
+'Analyzed 112,860 test results from 74 CI runs, including sampled history from apache/druid and home-assistant/core.'
+], chips: ['Python', 'PostgreSQL', 'GitHub Actions'] }
+];
+
+class Component extends DCLogic {
+constructor(props) { super(props); this.state = { i: 0 }; this._sx = null; this._t = 0; }
+go(d) {
+const n = ITEMS.length;
+this.setState((s) => ({ i: Math.max(0, Math.min(n - 1, s.i + d)) }));
+}
+renderVals() {
+const n = ITEMS.length;
+const i = this.state.i;
+const pad = (x) => (x < 10 ? '0' + x : '' + x);
+const cards = ITEMS.map((it, k) => {
+const off = k - i;
+const a = Math.abs(off);
+const far = a > 2;
+const slotStyle = 'transform:translateX(' + (off * 350) + 'px) translateZ(' + (-a * 190) + 'px) rotateY(' + (-off * 24) + 'deg);opacity:' + (far ? 0 : (1 - a * 0.2)) + ';filter:grayscale(' + Math.min(1, a) + ') brightness(' + (1 - Math.min(a, 2) * 0.1) + ');z-index:' + (10 - a) + ';pointer-events:' + (far ? 'none' : 'auto');
+return {
+slotStyle,
+num: it.num, numLabel: it.numLabel, name: it.name, tagline: it.tagline, repo: it.repo, hasDemo: it.hasDemo,
+points: it.points.map((t) => ({ t })),
+chips: it.chips.map((t) => ({ t })),
+notCenter: off !== 0,
+play: off === 0 ? 'running' : 'paused',
+is0: k === 0, is1: k === 1, is2: k === 2, is3: k === 3, is4: k === 4, is5: k === 5, is6: k === 6,
+label: 'Show ' + it.name,
+pick: () => this.setState({ i: k })
+};
+});
+return {
+cards,
+counter: pad(i + 1) + ' / ' + pad(n),
+atStart: i === 0,
+atEnd: i === n - 1,
+prev: () => this.go(-1),
+next: () => this.go(1),
+dots: ITEMS.map((it, k) => ({ label: 'Go to ' + it.name, color: k === i ? '#E10600' : '#5A5A5C', pick: () => this.setState({ i: k }) })),
+down: (e) => { this._sx = e.clientX; },
+up: (e) => {
+if (this._sx === null) return;
+const dx = e.clientX - this._sx;
+this._sx = null;
+if (Math.abs(dx) > 60) this.go(dx < 0 ? 1 : -1);
+},
+wheel: (e) => {
+if (Math.abs(e.deltaX) > Math.abs(e.deltaY) && Math.abs(e.deltaX) > 20) {
+const now = Date.now();
+if (now - this._t > 450) { this._t = now; this.go(e.deltaX > 0 ? 1 : -1); }
+}
+},
+keys: (e) => {
+if (e.key === 'ArrowRight') this.go(1);
+else if (e.key === 'ArrowLeft') this.go(-1);
+}
+};
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About | Manaswi Makkena</title>
+<script src="dc-lite.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..500&family=Manrope:wght@400;500;600;700;800&display=swap">
+<style>
+body{margin:0}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid #FFFFFF;outline-offset:3px;border-radius:6px}
+.nl{color:#F4F4F2;text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}
+.nl:hover{border-bottom-color:#E10600}
+.nl.on{border-bottom-color:#E10600}
+.btnr{display:inline-block;background:#E10600;color:#FFFFFF;padding:15px 28px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none}
+.btnr:hover{background:#B80500}
+.slot{position:absolute;left:50%;top:36px;margin-left:-240px;width:480px;transition:transform .7s cubic-bezier(.2,.7,.2,1),opacity .5s ease,filter .5s ease}
+.face{transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s ease}
+.face:hover{transform:translateY(-16px) scale(1.035);box-shadow:0 44px 70px -24px rgba(0,0,0,.6)}
+.cbtn{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:transform .2s ease,background .2s ease}
+.cbtn:hover:not(:disabled){transform:scale(1.08)}
+.cbtn:disabled{opacity:.35;cursor:default}
+@media (prefers-reduced-motion:reduce){.slot,.face,.cbtn{transition:none}}
+.wc{transition:transform .3s ease,box-shadow .3s ease}.wc:hover{transform:translateY(-8px)}
+
+.rise-h{animation:riseH .9s cubic-bezier(.2,.8,.2,1) both}
+@keyframes riseH{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
+.fadeIn{animation:riseH .9s ease both}
+.orb{position:absolute;border-radius:50%;filter:blur(100px);pointer-events:none;z-index:0}
+.orb.r{background:rgba(225,6,0,0.30)}.orb.s{background:rgba(192,192,192,0.14)}
+.o1{animation:oA 18s ease-in-out infinite alternate}.o2{animation:oB 22s ease-in-out infinite alternate}
+@keyframes oA{0%{transform:translate(0,0)}100%{transform:translate(240px,180px)}}
+@keyframes oB{0%{transform:translate(0,0)}100%{transform:translate(-220px,-140px)}}
+.gl{transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease}
+.gl:hover{transform:translateY(-8px);border-color:rgba(255,255,255,0.45);box-shadow:0 28px 50px -24px rgba(225,6,0,0.55)}
+.rbtn{display:inline-block;background:linear-gradient(180deg,#FF2A20,#E10600 55%,#B80500);color:#fff;padding:14px 26px;border-radius:999px;font-weight:800;font-size:16px;text-decoration:none;box-shadow:0 12px 30px -8px rgba(225,6,0,0.7),inset 0 1px 0 rgba(255,255,255,0.4);transition:transform .2s ease}
+.rbtn:hover{transform:translateY(-3px)}
+.shine{position:relative;overflow:hidden}
+.shine:after{content:"";position:absolute;top:0;right:0;bottom:0;left:0;background:linear-gradient(115deg,transparent 38%,rgba(255,255,255,0.22) 50%,transparent 62%);background-size:260% 100%;background-position:150% 0;animation:shn 7s ease-in-out infinite;pointer-events:none}
+@keyframes shn{0%{background-position:150% 0}40%,100%{background-position:-50% 0}}
+@media (prefers-reduced-motion:reduce){.rise-h,.fadeIn,.orb,.shine:after{animation:none}}
+.wash{position:absolute;top:0;right:0;bottom:0;left:0;z-index:0;pointer-events:none;background:radial-gradient(circle at 14% 8%,rgba(225,6,0,0.20),transparent 28%),radial-gradient(circle at 88% 38%,rgba(192,192,192,0.16),transparent 34%),radial-gradient(circle at 24% 88%,rgba(225,6,0,0.12),transparent 30%);background-size:170% 170%;animation:washMove 16s ease-in-out infinite alternate}
+@keyframes washMove{0%{background-position:0% 0%}100%{background-position:100% 100%}}
+.orb.r{background:rgba(225,6,0,0.22)}.orb.s{background:rgba(192,192,192,0.14)}
+@media (prefers-reduced-motion:reduce){.wash{animation:none}}
+.pf{animation:pfloat 7s ease-in-out infinite}@keyframes pfloat{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-12px) rotate(1deg)}}@media (prefers-reduced-motion:reduce){.pf{animation:none}}</style>
+</helmet>
+<div style="background:linear-gradient(180deg,#222224 0%,#141415 100%);position:relative;overflow:hidden;color:#F4F4F2;font-family:'Manrope',system-ui,sans-serif;min-height:1320px">
+<div class="wash"></div><div class="orb s o1" style="width:640px;height:640px;left:-180px;top:-60px"></div><div class="orb r o2" style="width:560px;height:560px;right:-160px;top:520px"></div>
+
+<nav style="position:relative;z-index:5;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:24px 56px">
+<a href="index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:800;font-size:17px"><span style="width:58px;height:58px;display:block;position:relative;margin:-6px 0;flex:0 0 58px" aria-hidden="true"><span style="position:absolute;top:0;right:0;bottom:0;left:0;background:url(me-red-directions.webp) no-repeat;background-size:300% 300%;background-position:50% 50%"></span></span>Manaswi Makkena</a>
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:6px 28px;font-size:15px;font-weight:600">
+<a href="index.html" class="nl">Home</a>
+<a href="about.html" class="nl on">About</a>
+<a href="education.html" class="nl">Education</a>
+<a href="experience.html" class="nl">Experience</a>
+<a href="projects.html" class="nl">Projects</a>
+<a href="skills.html" class="nl">Skills</a>
+<a href="contact.html" class="nl">Contact</a>
+<a href="contact.html" style="background:#F4F4F2;color:#1E1E1F;padding:10px 20px;border-radius:999px;text-decoration:none">Resume</a>
+</div>
+</nav>
+<header style="position:relative;z-index:2;padding:48px 56px 8px;display:flex;flex-wrap:wrap;gap:48px;align-items:center;justify-content:space-between">
+<div style="flex:1 1 600px;min-width:0">
+<h1 class="rise-h" style="margin:0;font-weight:800;font-size:88px;line-height:1.05;letter-spacing:-0.04em">About me</h1>
+<p style="margin:28px 0 0;max-width:820px;font-size:26px;line-height:1.65;font-weight:500">I am Manaswi Makkena, a computer science senior at Arizona State University in Tempe, graduating in December 2026. I build AI and backend systems. I am an AI engineer at Mach-AI, where I ship AI features for sales leads, and I was a software engineer intern at Endless Moments, where I built an HR platform, and at Neuramod, where I built a health logging app. At ASU I have worked as a TA for CSE 360, FSE 100 and ASU 101. On my own I build projects like a payments ledger, an AI answer checker and a cloud settings scanner.</p>
+</div>
+<div class="pf" style="flex:0 0 300px;height:360px;border-radius:30px;padding:10px;background:linear-gradient(160deg,rgba(255,255,255,0.22),rgba(255,255,255,0.05));border:1px solid rgba(255,255,255,0.3);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);box-shadow:0 30px 60px -28px rgba(225,6,0,0.55),inset 0 1px 0 rgba(255,255,255,0.35)"><div style="width:100%;height:100%;border-radius:22px;background:url(about-photo.jpg) center 22%/cover no-repeat"></div></div>
+</header>
+<section style="position:relative;z-index:2;padding:56px 56px 80px">
+<h2 style="margin:0 0 28px;font-weight:800;font-size:56px;letter-spacing:-0.035em">What I like working on</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px">
+<a class="wc" href="experience.html" style="display:flex;flex-direction:column;text-decoration:none;color:#F4F4F2;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.2);border-radius:22px;padding:34px;-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 20px 40px -26px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.28)">
+<div style="width:44px;height:5px;background:#E10600;margin-bottom:22px;border-radius:3px"></div>
+<h3 style="margin:0 0 14px;font-size:30px;font-weight:800;line-height:1.25">AI features that stay reliable</h3>
+<p style="margin:0 0 26px;flex:1 1 auto;font-size:20px;line-height:1.65;color:#E4E4E2">At Mach-AI I build AI features for sales leads, with typed API contracts, benchmarked models and a fallback so results never go missing. My experience page covers my work at Mach-AI, Endless Moments and Neuramod.</p>
+<span style="font-weight:800;font-size:20px;color:#FF5A4D">See my experience</span></a>
+<a class="wc" href="projects.html" style="display:flex;flex-direction:column;text-decoration:none;color:#F4F4F2;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.2);border-radius:22px;padding:34px;-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 20px 40px -26px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.28)">
+<div style="width:44px;height:5px;background:#E10600;margin-bottom:22px;border-radius:3px"></div>
+<h3 style="margin:0 0 14px;font-size:30px;font-weight:800;line-height:1.25">Backend systems that keep every record</h3>
+<p style="margin:0 0 26px;flex:1 1 auto;font-size:20px;line-height:1.65;color:#E4E4E2">Settle, my payments ledger, kept every payment through 20,000 sends while I stopped its workers on purpose. My projects page also covers Cite, Gauge, Cloud Drift Guard and more.</p>
+<span style="font-weight:800;font-size:20px;color:#FF5A4D">See my projects</span></a>
+<a class="wc" href="skills.html" style="display:flex;flex-direction:column;text-decoration:none;color:#F4F4F2;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.2);border-radius:22px;padding:34px;-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 20px 40px -26px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.28)">
+<div style="width:44px;height:5px;background:#E10600;margin-bottom:22px;border-radius:3px"></div>
+<h3 style="margin:0 0 14px;font-size:30px;font-weight:800;line-height:1.25">Cloud, data and testing</h3>
+<p style="margin:0 0 26px;flex:1 1 auto;font-size:20px;line-height:1.65;color:#E4E4E2">I work with AWS, Docker and Kubernetes, use PostgreSQL, DuckDB and dbt for data, and test with JUnit, pytest and Jest. My skills page lists every tool by area.</p>
+<span style="font-weight:800;font-size:20px;color:#FF5A4D">See my skills</span></a>
+</div></section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2000}}'>
+class Component extends DCLogic { renderVals() { return {}; } }
+</script>
+</body>
+</html>
