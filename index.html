@@ -15,7 +15,7 @@ iframe{display:block;width:100%;border:0;height:100vh;background:#141415;transfo
 .nl{padding:6px 0;border-bottom:2px solid transparent;transition:border-color .2s}
 .nl:hover,.nl.on{border-bottom-color:#E10600}
 #res{background:#F4F4F2;color:#1E1E1F!important;padding:12px 24px;border-radius:999px;font-weight:800;font-size:19px}
-@media (min-width:901px){#bar{transform:scale(.75);transform-origin:0 0;top:15px;left:30px;right:auto;width:calc((100vw - 60px)/.75);box-sizing:border-box}}
+@media (min-width:901px){#bar{transform:scale(.65);transform-origin:0 0;top:13px;left:26px;right:auto;width:calc((100vw - 52px)/.65);box-sizing:border-box}}
 @media (max-width:900px){#bar{left:12px;right:12px;border-radius:28px;padding:12px 18px}#links{gap:4px 18px;font-size:16px}#brand{font-size:22px}#mas{width:64px;height:64px;flex:0 0 64px}}
 </style></head>
 <body>
@@ -24,16 +24,16 @@ iframe{display:block;width:100%;border:0;height:100vh;background:#141415;transfo
 <div id="links">
 <a class="nl on" href="#home">Home</a><a class="nl" href="#about">About</a><a class="nl" href="#education">Education</a><a class="nl" href="#experience">Experience</a><a class="nl" href="#projects">Projects</a><a class="nl" href="#skills">Skills</a><a class="nl" href="#contact">Contact</a>
 </div></div>
-<section id="home"><iframe src="home.html?v=6" title="Home"></iframe></section>
-<section id="about"><iframe src="about.html?v=6" title="About me"></iframe></section>
-<section id="education"><iframe src="education.html?v=6" title="Education"></iframe></section>
-<section id="experience"><iframe src="experience.html?v=6" title="Experience"></iframe></section>
-<section id="projects"><iframe src="projects.html?v=6" title="Projects"></iframe></section>
-<section id="skills"><iframe src="skills.html?v=6" title="Skills"></iframe></section>
-<section id="contact"><iframe src="contact.html?v=6" title="Contact"></iframe></section>
+<section id="home"><iframe src="home.html?v=7" title="Home"></iframe></section>
+<section id="about"><iframe src="about.html?v=7" title="About me"></iframe></section>
+<section id="education"><iframe src="education.html?v=7" title="Education"></iframe></section>
+<section id="experience"><iframe src="experience.html?v=7" title="Experience"></iframe></section>
+<section id="projects"><iframe src="projects.html?v=7" title="Projects"></iframe></section>
+<section id="skills"><iframe src="skills.html?v=7" title="Skills"></iframe></section>
+<section id="contact"><iframe src="contact.html?v=7" title="Contact"></iframe></section>
 <script>
 var S=1;
-function calcS(){S=window.innerWidth>900?0.75:1;return S}
+function calcS(){S=window.innerWidth>900?0.65:1;return S}
 function setH(f,hh){calcS();f.style.width=(100/S)+'%';f.style.transform=S===1?'none':'scale('+S+')';f.style.height=hh+'px';f.parentElement.style.height=(hh*S)+'px'}
 function fixAll(){calcS();document.querySelectorAll('section iframe').forEach(function(f){var t=f.title;if(t==='Home'||t==='Education'||t==='Experience'||t==='Skills'||t==='Projects'||t==='Contact')setH(f,window.innerHeight/S);else setH(f,f.offsetHeight||window.innerHeight/S)})}
 var IDS=['home','about','education','experience','projects','skills','contact'];
